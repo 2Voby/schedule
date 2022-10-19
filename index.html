@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20221019225627" />
+
+  <title>Розклад уроків</title>
+</head>
+
+  <body>
+    <header id="header" class="header">
+  <div class="header__container">
+    <div class="header__content">
+      <a href="" class="header__logo">
+        <img src="img/logo.png" alt="logo" />
+      </a>
+      <div class="header__nav nav-header">
+        <!-- <div class="nav-header__button">Викладачі</div>
+        <div class="nav-header__button">Аудиторії</div> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="wrapper"><main>
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero-content__schedule-block schedule-block">
+          <div class="schedule-block__header schedule-block-header">
+            <h3 class="schedule-block-header__group"></h3>
+            <div class="schedule-block-header__curr">
+              <div class="schedule-block-header__week"></div>
+              <div class="schedule-block-header__day"></div>
+            </div>
+          </div>
+
+          <div
+            id="schedule-block-body"
+            class="schedule-block__body schedule-block-body"
+          ></div>
+          <!-- append content from js -->
+        </div>
+
+        <div class="hero-content__sidebar hero-sidebar loading">
+          <h2 class="hero-sidebar__title">Оберіть свою групу</h2>
+          <div class="hero-sidebar__content">
+            <div class="dropdown dropdown-group">
+              <button class="dropdown__button">
+                <p class="dropdown__button-text"></p>
+                <img class="dropdown__button-img" src="img/arrow.svg" alt="" />
+              </button>
+              <ul class="dropdown__list dropdown-list__groups"></ul>
+            </div>
+            <div class="dropdown dropdown-week">
+              <button class="dropdown__button">
+                <p class="dropdown__button-text"></p>
+                <img class="dropdown__button-img" src="img/arrow.svg" alt="" />
+              </button>
+              <ul class="dropdown__list dropdown-list__week"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+    <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__content">
+      <a
+        target="_blank"
+        href="https://liceum.ztu.edu.ua/"
+        class="footer__logo-link"
+        ><img src="img/logo.png" alt=""
+      /></a>
+      <div class="footer__contacts contacts-footer">
+        <h3 class="contacts-footer__title">Контакти</h3>
+        <ul class="contacts-footer__row">
+          <a class="contacts-footer__row-item">
+            <img
+              class="contacts-footer__row-item-img"
+              src="img/mail.png"
+              alt=""
+            />
+          </a>
+          <a class="contacts-footer__row-item">
+            <img
+              class="contacts-footer__row-item-img"
+              src="img/facebook.png"
+              alt=""
+          /></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="js/app.min.js?_v=20221019225627" defer></script>
+  </body>
+</html>
