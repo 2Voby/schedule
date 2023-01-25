@@ -293,7 +293,7 @@ html {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .choosed-lesson-by-teacher {
@@ -321,6 +321,10 @@ html {
 
 .dropdown__list--visible {
   display: block !important;
+}
+
+.page-hidden {
+  display: none;
 }
 
 .change-theme {
@@ -1019,6 +1023,188 @@ html.dark .holidays-popup__text {
   display: block !important;
 }
 
+.message-button {
+  position: fixed;
+  bottom: 20px;
+  background-color: #2d2f34;
+  border: 0.5px solid #010101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@supports (right: clamp( 0.625rem , 0.4723282443rem  +  0.7633587786vw , 1.25rem )) {
+  .message-button {
+    right: clamp( 0.625rem , 0.4723282443rem  +  0.7633587786vw , 1.25rem );
+  }
+}
+
+@supports not (right: clamp( 0.625rem , 0.4723282443rem  +  0.7633587786vw , 1.25rem )) {
+  .message-button {
+    right: calc(0.625rem + 0.625 * (100vw - 20rem) / 81.875);
+  }
+}
+
+@supports (width: clamp( 3.125rem , 2.9723282443rem  +  0.7633587786vw , 3.75rem )) {
+  .message-button {
+    width: clamp( 3.125rem , 2.9723282443rem  +  0.7633587786vw , 3.75rem );
+  }
+}
+
+@supports not (width: clamp( 3.125rem , 2.9723282443rem  +  0.7633587786vw , 3.75rem )) {
+  .message-button {
+    width: calc(3.125rem + 0.625 * (100vw - 20rem) / 81.875);
+  }
+}
+
+@supports (height: clamp( 3.125rem , 2.9723282443rem  +  0.7633587786vw , 3.75rem )) {
+  .message-button {
+    height: clamp( 3.125rem , 2.9723282443rem  +  0.7633587786vw , 3.75rem );
+  }
+}
+
+@supports not (height: clamp( 3.125rem , 2.9723282443rem  +  0.7633587786vw , 3.75rem )) {
+  .message-button {
+    height: calc(3.125rem + 0.625 * (100vw - 20rem) / 81.875);
+  }
+}
+
+.message-button__img {
+  width: 60%;
+  height: 60%;
+}
+
+.message-form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.message-form-wrapper .message-form-block {
+  width: 100%;
+  max-width: 45rem;
+  background-color: #383b40;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.message-form-wrapper .message-form-block::-webkit-scrollbar {
+  background-color: #2d2f34;
+  width: 5px;
+}
+
+.message-form-wrapper .message-form-block::-webkit-scrollbar-thumb {
+  background-color: #809ce5;
+  border-radius: 10px;
+}
+
+.message-form-wrapper .message-form-block .message-inner {
+  padding: 2.1875rem 1.25rem;
+  position: relative;
+  min-height: 600px;
+  border: 0.5px solid #000000;
+}
+
+.message-form-wrapper .message-form-block .message-inner__close-button {
+  position: absolute;
+  max-width: 1.875rem;
+  right: 11px;
+  top: 11px;
+  cursor: pointer;
+}
+
+.message-form-wrapper .message-form-block .message-inner__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.875rem;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form* {
+  outline: none;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__content {
+  background-color: #2d2f34;
+  padding: 1.25rem 1.25rem;
+  margin: 0 auto;
+  max-width: 30rem;
+  border-radius: 0.3125rem;
+  margin-bottom: 2.5rem;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__item {
+  margin-bottom: 0.625rem;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__label {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 112.5%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 0.3125rem;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__input {
+  background: #383b40;
+  border: 0.5px solid #000000;
+  border-radius: 15px;
+  min-height: 2.1875rem;
+  padding: 5px 10px;
+  outline: none;
+  color: #ffffff;
+  width: 100%;
+  max-width: 14.0625rem;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__toggler {
+  margin-bottom: 1.5625rem;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__item-message textarea {
+  width: 100% !important;
+  max-width: none;
+  min-height: 7.5rem;
+  resize: none;
+  padding: 10px 10px;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__submit-button-wrapper {
+  margin-left: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.message-form-wrapper .message-form-block .message-inner .message-form__submit-button {
+  background: #809ce5;
+  border: 0.38px solid #000000;
+  border-radius: 15px;
+  padding: 0.3125rem 0.9375rem;
+  cursor: pointer;
+  color: #3a3a3a;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+
 .holidays-popup--hidden {
   opacity: 0 !important;
   overflow: hidden !important;
@@ -1058,7 +1244,7 @@ html.dark .holidays-popup__text {
 }
 
 .holidays-popup .holidays-popup-body__main {
-  padding: 40px 15px 40px 15px;
+  padding: 40px 15px 60px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1090,7 +1276,7 @@ html.dark .holidays-popup__text {
   font-size: 32px;
   line-height: 38px;
   color: #000;
-  margin-bottom: 50px;
+  margin-bottom: 6.25rem;
 }
 
 .holidays-popup__img {
@@ -1127,7 +1313,7 @@ html.dark .holidays-popup__text {
   display: none;
   position: absolute;
   top: -100%;
-  left: 0;
+  left: 50%;
   background: #2d2f34;
   border: 0.3px solid #000000;
   color: rgba(255, 255, 255, 0.85);
@@ -1135,6 +1321,7 @@ html.dark .holidays-popup__text {
   width: -moz-max-content;
   width: max-content;
   padding: 2px 6px;
+  transform: translateX(-50%);
 }
 
 .header {
