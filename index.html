@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20230313200720" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="img/favicon/faviocon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="img/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="img/favicon/favicon-16x16.png"
+  />
+
+  <link
+    rel="mask-icon"
+    href="img/favicon/safari-pinned-tab.svg"
+    color="#5bbad5"
+  />
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Розклад уроків</title>
+</head>
+
+  <body>
+    <!-- <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyC3-DKAqn361fKip4OZFhCexErgYLnSHgI",
+        authDomain: "schedule-cd651.firebaseapp.com",
+        projectId: "schedule-cd651",
+        storageBucket: "schedule-cd651.appspot.com",
+        messagingSenderId: "328836822913",
+        appId: "1:328836822913:web:4fd895ac96c6a66628da80",
+        measurementId: "G-MC7H5WVS76",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithPopup,
+        signOut,
+      } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      async function logIn() {
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            const user = result.user;
+            // console.log(user);
+            showUserName(user);
+          })
+          .catch(() => {
+            document
+              .getElementById("login")
+              .addEventListener("click", logIn, { once: true });
+          });
+      }
+
+      async function logOut() {
+        // console.log("before exit");
+        signOut(auth).then(() => {
+          // console.log("after");
+          document.getElementById("login").innerText = "Увійти";
+          document.getElementById("userName").innerText = "Привіт, немісцевий!";
+          document
+            .getElementById("login")
+            .addEventListener("click", logIn, { once: true });
+        });
+      }
+
+      // document.getElementById("login").addEventListener(
+      //   "click",
+      //   function () {
+      //     console.log("clicked");
+      //   },
+      //   { once: true }
+      // );
+
+      document
+        .getElementById("login")
+        .addEventListener("click", logIn, { once: true });
+      /* .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        showUserName(user);
+        //console.log(user);
+        // IdP data available using getAdditionalUserInfo(result)
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      } */
+
+      //signInWithPopup();
+      // })
+
+      function showUserName(user) {
+        document.getElementById("userName").innerText = user.displayName;
+        document.getElementById("login").innerText = "Вийти";
+        document
+          .getElementById("login")
+          .addEventListener("click", logOut, { once: true });
+      }
+    </script> -->
+
+    <header id="header" class="header">
+  <div class="header__container">
+    <div class="header__content">
+      <a href="" class="header__logo">
+        <img src="img/logo.png" alt="logo" />
+      </a>
+      <div class="header__navigation navigation-header">
+        <div class="header__menu menu-header">
+          <!-- <a class="nav-header__button" id="userName">Привіт, немісцевий!</a> -->
+          <a class="students menu-header__button">Учню</a>
+          <a class="teachers menu-header__button">Викладачу</a>
+          <a class="extraclasses menu-header__button">Додаткові </a>
+          <!-- <a class="extraclasses nav-header__button" id="login">Увійти</a> -->
+        </div>
+        <div class="header__buttons buttons-header">
+          <div class="buttons-header__item header__controls controls-header">
+            <div class="controls-header__item item-calendar">
+              <img src="img/calendar.svg" alt="" />
+            </div>
+            <div class="controls-header__item item-login">
+              <img src="img/login.svg" alt="" />
+              <span class="soon">soon</span>
+            </div>
+          </div>
+          <div class="buttons-header__item header__burger">
+            <div class="header__burger-line header__burger-line-1"></div>
+            <div class="header__burger-line header__burger-line-2"></div>
+            <div class="header__burger-line header__burger-line-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="wrapper">
+      <main id="main-page" class="page students-page_main">
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero-content__schedule-block schedule-block">
+          <div class="schedule-block__header schedule-block-header">
+            <h3 class="schedule-block-header__group hidden">
+              <img class="icon title-icon" src="img/group-icon.svg" alt="" />
+              <span class="schedule-block-header__group-text"></span>
+            </h3>
+            <div class="schedule-block-header__curr">
+              <div class="schedule-block-header__week"></div>
+              <div class="schedule-block-header__day"></div>
+            </div>
+          </div>
+
+          <div
+            id="schedule-block-body"
+            class="schedule-block__body schedule-block-body"
+          >
+            <div class="schedule-body__popup schedule-popup d-none">
+              <div class="schedule-popup__body"></div>
+            </div>
+          </div>
+          <!-- <div class="schedule-block-news">
+            УВАГА! у звязку з повітряними тривогами, розклад може бути зміненим
+          </div> -->
+          <!-- append content from js -->
+        </div>
+
+        <div class="hero-content__sidebar hero-sidebar">
+          <div class="hero-sidebar__navigation sidebar-nav">
+            <a class="change-theme"></a>
+            <div class="sidebar-nav__item">
+              <div class="title-block">
+                <img src="img/schedule-img.svg" alt="" />
+                <h3>Розклад</h3>
+              </div>
+              <div class="toggler-button">
+                <label for="toggle" class="toggler toggler-block">
+                  <span class="toggler__text toggler__text-left">Поточний</span>
+                  <input
+                    type="checkbox"
+                    id="toggle"
+                    class="toggle choose-curr-week__toggle"
+                  />
+                  <div class="toggler__button"></div>
+                  <span class="toggler__text toggler__text-right">Весь</span>
+                </label>
+              </div>
+            </div>
+            <div class="sidebar-nav__item">
+              <div class="title-block">
+                <img src="img/choose-group-icon.svg" alt="" />
+                <h3>Оберіть групу</h3>
+              </div>
+              <div class="dropdown dropdown-group">
+                <button class="dropdown__button">
+                  <p
+                    class="dropdown__button-text dropdown-group__button-text"
+                  ></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__groups"></ul>
+              </div>
+            </div>
+            <div class="sidebar-nav__item sidebar-nav__item-week">
+              <div class="title-block">
+                <img src="img/choose-week-icon.svg" alt="" />
+                <h3>Оберіть тиждень</h3>
+              </div>
+              <div class="dropdown dropdown-week dropdown__block-week">
+                <button class="dropdown__button">
+                  <p class="dropdown__button-text"></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__week"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-sidebar__schedule bell-schedule">
+            <div class="bell-schedule__header">
+              <img
+                class="bell-schedule__header-img"
+                src="img/bell-icon.svg"
+                alt="bell"
+              />
+              <h2 class="bell-schedule__header-title">Розклад дзвінків</h2>
+            </div>
+            <div class="bell-schedule__content bell-schedule-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+ <main id="extraclasses-page" class="page extraclasses-page_main page-hidden">
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero-content__schedule-block schedule-block">
+          <div class="schedule-block__header schedule-block-header">
+            <div class="schedule-block-header__curr">
+              <div class="schedule-block-header__week"></div>
+              <div class="schedule-block-header__day"></div>
+            </div>
+          </div>
+
+          <div
+            id="schedule-block-body"
+            class="schedule-block__body schedule-block-body"
+          ></div>
+          <!-- append content from js -->
+        </div>
+        <div class="hero-content__sidebar hero-sidebar">
+          <div class="hero-sidebar__navigation sidebar-nav">
+            <button class="change-theme"></button>
+            <div class="sidebar-nav__item">
+              <div class="title-block">
+                <img src="img/schedule-img.svg" alt="" />
+                <h3>Розклад</h3>
+              </div>
+              <div class="toggler-button">
+                <label for="toggle" class="toggler toggler-block">
+                  <span class="toggler__text toggler__text-left">Поточний</span>
+                  <input
+                    type="checkbox"
+                    id="toggle"
+                    class="toggle choose-curr-week__toggle"
+                  />
+                  <div class="toggler__button"></div>
+                  <span class="toggler__text toggler__text-right">Весь</span>
+                </label>
+              </div>
+            </div>
+            <div class="sidebar-nav__item dropdown__block-extraclasses">
+              <div class="title-block">
+                <img src="img/choose-teacher-icon.png" alt="" />
+                <h3>Оберіть заняття</h3>
+              </div>
+              <div class="dropdown dropdown-extraclasses">
+                <button class="dropdown__button">
+                  <p
+                    class="dropdown__button-text dropdown-extraclasses__button-text"
+                  ></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__extraclasses"></ul>
+              </div>
+            </div>
+            <div class="sidebar-nav__item dropdown__block-week">
+              <div class="title-block">
+                <img src="img/choose-week-icon.svg" alt="" />
+                <h3>Оберіть тиждень</h3>
+              </div>
+              <div class="dropdown dropdown-week">
+                <button class="dropdown__button">
+                  <p class="dropdown__button-text"></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__week"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-sidebar__schedule bell-schedule">
+            <div class="bell-schedule__header">
+              <img
+                class="bell-schedule__header-img"
+                src="img/bell-icon.svg"
+                alt="bell"
+              />
+              <h2 class="bell-schedule__header-title">Розклад дзвінків</h2>
+            </div>
+            <div class="bell-schedule__content bell-schedule-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+      <main id="teachers-page" class="page teachers-page_main page-hidden">
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero-content__schedule-block schedule-block">
+          <div class="schedule-block__header schedule-block-header">
+            <div class="schedule-block-header__curr">
+              <div class="schedule-block-header__week"></div>
+              <div class="schedule-block-header__day"></div>
+            </div>
+          </div>
+
+          <div
+            id="schedule-block-body"
+            class="schedule-block__body schedule-block-body"
+          ></div>
+          <!-- append content from js -->
+        </div>
+        <div class="hero-content__sidebar hero-sidebar">
+          <div class="hero-sidebar__navigation sidebar-nav">
+            <button class="change-theme"></button>
+            <div class="sidebar-nav__item">
+              <div class="title-block">
+                <img src="img/schedule-img.svg" alt="" />
+                <h3>Розклад</h3>
+              </div>
+              <div class="toggler-button">
+                <label for="toggle" class="toggler toggler-block">
+                  <span class="toggler__text toggler__text-left">Поточний</span>
+                  <input
+                    type="checkbox"
+                    id="toggle"
+                    class="toggle choose-curr-week__toggle"
+                  />
+                  <div class="toggler__button"></div>
+                  <span class="toggler__text toggler__text-right">Весь</span>
+                </label>
+              </div>
+            </div>
+            <div class="sidebar-nav__item">
+              <div class="title-block">
+                <img src="img/choose-teacher-icon.png" alt="" />
+                <h3>Вчитель</h3>
+              </div>
+              <div class="dropdown dropdown-teacher">
+                <button class="dropdown__button">
+                  <p
+                    class="dropdown__button-text dropdown-teacher__button-text"
+                  ></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__teachers"></ul>
+              </div>
+            </div>
+            <div class="sidebar-nav__item dropdown__block-group hidden">
+              <div class="title-block">
+                <img src="img/choose-group-icon.svg" alt="" />
+                <h3>Оберіть групу</h3>
+              </div>
+              <div class="dropdown dropdown-group">
+                <button class="dropdown__button">
+                  <p
+                    class="dropdown__button-text dropdown-group__button-text"
+                  ></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__groups"></ul>
+              </div>
+            </div>
+            <div class="sidebar-nav__item dropdown__block-week">
+              <div class="title-block">
+                <img src="img/choose-week-icon.svg" alt="" />
+                <h3>Оберіть тиждень</h3>
+              </div>
+              <div class="dropdown dropdown-week">
+                <button class="dropdown__button">
+                  <p class="dropdown__button-text"></p>
+                  <img
+                    class="dropdown__button-img"
+                    src="img/arrow.svg"
+                    alt=""
+                  />
+                </button>
+                <ul class="dropdown__list dropdown-list__week"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-sidebar__schedule bell-schedule">
+            <div class="bell-schedule__header">
+              <img
+                class="bell-schedule__header-img"
+                src="img/bell-icon.svg"
+                alt="bell"
+              />
+              <h2 class="bell-schedule__header-title">Розклад дзвінків</h2>
+            </div>
+            <div class="bell-schedule__content bell-schedule-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    </div>
+    <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__content">
+      <div class="footer__main">
+        <a
+          target="_blank"
+          href="https://liceum.ztu.edu.ua/"
+          class="footer__logo-link"
+          ><img src="img/logo.png" alt=""
+        /></a>
+        <div class="footer__contacts contacts-footer">
+          <h3 class="contacts-footer__title">Контакти</h3>
+          <ul class="contacts-footer__row">
+            <a href="mailto:liceum@pinotino" class="contacts-footer__row-item">
+              <img
+                class="contacts-footer__row-item-img"
+                src="img/mail.png"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/ztueduua/"
+              class="contacts-footer__row-item"
+            >
+              <img
+                class="contacts-footer__row-item-img"
+                src="img/facebook.png"
+                alt=""
+            /></a>
+            <a
+              href="https://www.instagram.com/ztueduua/"
+              class="contacts-footer__row-item"
+            >
+              <img
+                class="contacts-footer__row-item-img"
+                src="img/instagram.png"
+                alt=""
+            /></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="footer__bottom">
+    <div class="footer__container">
+      <div class="footer__bottom-content">
+        <p class="made-by">
+          <span>made by: </span
+          ><a href="mailto:gerasimcukvlad37@gmail.com">@2Voby</a>
+        </p>
+      </div>
+    </div>
+  </div> -->
+</footer>
+
+    <script src="js/app.min.js?_v=20230313200720" defer></script>
+    <div class="page-loading">
+      <div class="page-loading__content">
+        <img
+          src="img/logo-icon.png"
+          alt=""
+          class="page-loading__content-img"
+        />
+      </div>
+    </div>
+    <div class="popup-wrapper holidays-popup-wrapper holidays-popup--hidden">
+      <div class="popup holidays-popup">
+        <div class="holidays-popup__body holidays-popup-body">
+          <div class="holidays-popup__close">
+            <img src="img/close.svg" alt="" />
+          </div>
+          <div class="holidays-popup-body__main">
+            <h3 class="holidays-popup__text">Розклад канікул</h3>
+            <div class="holidays-popup__chronology holidays-chronology">
+              <div class="holidays-chronology__line">
+                <!-- <div class="holidays-chronology__item">
+                  <div class="holidays-chronology__item-info">
+                    23.10.2022-09.01.2023
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-button">
+      <a
+        href="https://forms.gle/uze1Strf8LrZycbU8"
+        target="_blank"
+        class="message-button__img"
+      >
+        <img src="img/message-button.svg" alt="" />
+      </a>
+    </div>
+    <div class="message-form-wrapper d-none">
+      <div class="message-form-block">
+        <div class="message-form-block__inner message-inner">
+          <div class="message-inner__close-button">
+            <img src="img/close.svg" alt="close-form" />
+          </div>
+          <h3 class="message-inner__title">
+            Тут ви можете залишити свої побжання або оповістити про знайдену
+            помилку
+          </h3>
+          <form action="" class="message-form">
+            <div class="message-form__content">
+              <div
+                class="message-form__item message-form__toggler toggler-button"
+              >
+                <label for="toggle" class="toggler toggler-block">
+                  <span class="toggler__text toggler__text-left">Коментар</span>
+                  <input
+                    type="checkbox"
+                    id="toggle"
+                    class="toggle choose-message-type"
+                  />
+                  <div class="toggler__button"></div>
+                  <span class="toggler__text toggler__text-right">Баг</span>
+                </label>
+              </div>
+              <div class="message-form__item message-form__item-name">
+                <label for="messageFormName" class="message-form__label"
+                  >Ім'я*:</label
+                >
+                <input
+                  id="messageFormName"
+                  type="text"
+                  name="name"
+                  class="message-form__input _req"
+                />
+              </div>
+              <div class="message-form__item message-form__item-email">
+                <label for="messageFormEmail" class="message-form__label"
+                  >Пошта*:</label
+                >
+                <input
+                  id="messageFormEmail"
+                  type="email"
+                  name="emial"
+                  class="message-form__input _req _email"
+                />
+              </div>
+              <div class="message-form__item message-form__item-message">
+                <label for="messageFormMessage" class="message-form__label"
+                  >Повідомлення:</label
+                >
+                <textarea
+                  type="text"
+                  name="message"
+                  id="messageFormMessage"
+                  cols=""
+                  rows=""
+                  class="message-form__input"
+                ></textarea>
+              </div>
+            </div>
+            <div class="message-form__submit-button-wrapper">
+              <button type="submit" class="button message-form__submit-button">
+                Відправити форму
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
