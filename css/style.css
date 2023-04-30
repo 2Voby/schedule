@@ -333,238 +333,6 @@ html {
   display: none;
 }
 
-.change-theme {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-}
-
-html.dark {
-  background-color: #010101;
-}
-
-html.dark .change-theme {
-  background: url("../img/sun.svg") 0 0/100% no-repeat;
-}
-
-html.light .change-theme {
-  background: url("../img/moon.svg") 0 0/100% no-repeat;
-}
-
-html.dark .message-button {
-  background-color: #2d2f34;
-}
-
-html.dark .choosed-lesson-by-teacher {
-  color: #010101;
-  background-color: #b0c4de;
-}
-
-html.dark header,
-html.dark footer {
-  background-color: #383b40;
-}
-
-html.dark main,
-html.dark html {
-  color: rgba(255, 255, 255, 0.85);
-  background-color: #1f2023;
-}
-
-html.dark .toggler {
-  background-color: #93aae5;
-}
-
-html.dark .toggler__button {
-  background-color: #809ce5;
-}
-
-html.dark .dropdown {
-  color: #27292d;
-}
-
-html.dark .dropdown__button {
-  background-color: #809ce5;
-}
-
-html.dark .dropdown__button-text {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-html.dark .dropdown__list {
-  background: #ffffff;
-}
-
-html.dark .dropdown__list::-webkit-scrollbar {
-  background-color: inherit;
-}
-
-html.dark .dropdown__list::-webkit-scrollbar-track {
-  background-color: #809ce5;
-}
-
-html.dark .dropdown__list::-webkit-scrollbar-thumb {
-  background-color: #b0c4de;
-}
-
-html.dark .dropdown__list-item {
-  background-color: #809ce5;
-}
-
-html.dark .dropdown__list-item:hover {
-  background: #91aef5;
-}
-
-html.dark .contacts-footer__title {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .schedule-block {
-  background-color: #27292d;
-}
-
-html.dark .schedule-block .schedule-block-header {
-  background: #2d2f34;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .schedule-block .schedule-block-body__week .week__title {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .schedule-block .schedule-block-body__week .day {
-  background-color: #383b40;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .schedule-block .schedule-block-body__week .day__title {
-  background-color: #27292d;
-  color: #ffffff;
-}
-
-html.dark .schedule-block .schedule-block-body__week .day .current-pair {
-  background: #809ce5;
-  color: #101010;
-}
-
-html.dark .schedule-block .schedule-block-body__week .current-day .day__title {
-  background: #809ce5;
-  color: #101010;
-}
-
-html.dark .schedule-block .schedule-block-body__week .next-day .day__title {
-  background-color: #d57279;
-}
-
-html.dark .schedule-block .current-week {
-  background-color: #323539;
-}
-
-html.dark .hero-sidebar .sidebar-nav {
-  background-color: #2d2f34;
-}
-
-html.dark .hero-sidebar .bell-schedule {
-  background-color: #2d2f34;
-}
-
-html.dark .hero-sidebar .bell-schedule__header {
-  background-color: #27292d;
-}
-
-html.dark .hero-sidebar .bell-schedule__header-title {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: rgb(255, 255, 255);
-}
-
-html.dark .hero-sidebar .bell-schedule .bell-schedule-content__row {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .hero-sidebar .upcoming-events {
-  background-color: #2d2f34;
-}
-
-html.dark .hero-sidebar .upcoming-events__header {
-  background-color: #27292d;
-}
-
-html.dark .hero-sidebar .upcoming-events__header-title {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: rgb(255, 255, 255);
-}
-
-html.dark .hero-sidebar .upcoming-events .upcoming-events-content {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .hero-sidebar .upcoming-events .upcoming-events-content .upcoming-events-item__button {
-  color: #000;
-}
-
-html.dark .popup-wrapper {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-html.dark .holidays-popup {
-  background-color: #383b40;
-}
-
-html.dark .holidays-popup__text {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .holidays-popup .holidays-content {
-  background: #2d2f34;
-}
-
-html.dark .holidays-popup .holidays-content::-webkit-scrollbar {
-  width: 4px;
-  background-color: #525252;
-}
-
-html.dark .holidays-popup .holidays-content::-webkit-scrollbar-thumb {
-  background-color: #252629;
-}
-
-html.dark .holidays-popup .holidays-content__item {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-html.dark .holidays-popup .item-event-tab .item-header {
-  background-color: #27292d;
-  color: #ffffff;
-}
-
-html.dark .holidays-popup .item-event-tab .item-content {
-  background-color: #383b40;
-  color: #fff;
-}
-
-html.dark .holidays-chronology__line {
-  background-color: #000000;
-}
-
-html.dark .holidays-chronology__line .holidays-chronology-proggress {
-  background-color: #809ce5;
-}
-
-html.dark .holidays-chronology__item {
-  background: #2d2f34;
-  border: 0.3px solid #000000;
-}
-
-html.dark .holidays-chronology__item-info {
-  background: #2d2f34;
-  border: 0.3px solid #000000;
-  color: rgba(255, 255, 255, 0.85);
-}
-
 .page-loading {
   z-index: 100;
   position: fixed;
@@ -1384,7 +1152,7 @@ html.dark .holidays-chronology__item-info {
   line-height: 120%;
 }
 
-.holidays-popup--hidden {
+.information-popup--hidden {
   opacity: 0 !important;
   overflow: hidden !important;
   width: 0 !important;
@@ -1408,7 +1176,7 @@ html.dark .holidays-chronology__item-info {
   padding: 0 10px;
 }
 
-.holidays-popup {
+.information-popup {
   max-height: 600px;
   height: 100%;
   width: 100%;
@@ -1428,11 +1196,11 @@ html.dark .holidays-chronology__item-info {
   flex-direction: column;
 }
 
-.holidays-popup .holidays-popup-body {
+.information-popup .information-popup-body {
   flex: 1 1 auto;
 }
 
-.holidays-popup .holidays-popup-body__main {
+.information-popup .information-popup-body__main {
   height: 100%;
   padding: 40px 15px 60px 15px;
   display: flex;
@@ -1440,11 +1208,11 @@ html.dark .holidays-chronology__item-info {
   align-items: center;
 }
 
-.holidays-popup .holidays-popup-body__main::-webkit-scrollbar {
+.information-popup .information-popup-body__main::-webkit-scrollbar {
   display: none;
 }
 
-.holidays-popup__close {
+.information-popup__close {
   top: 10px;
   right: 10px;
   max-width: 30px;
@@ -1456,7 +1224,7 @@ html.dark .holidays-chronology__item-info {
           user-select: none;
 }
 
-.holidays-popup__text {
+.information-popup__text {
   font-weight: 400;
   font-size: 2rem;
   line-height: 84.2105263158%;
@@ -1464,19 +1232,20 @@ html.dark .holidays-chronology__item-info {
   margin-bottom: 2.5rem;
 }
 
-.holidays-popup__toggler {
+.information-popup__toggler {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 1.875rem;
 }
 
-.holidays-popup__toggler .toggler-block {
+.information-popup__toggler .toggler-block {
   width: 100%;
   max-width: 300px;
 }
 
-.holidays-popup .holidays-content {
+.information-popup .information-content {
+  position: relative;
   background: #809ce5;
   border-radius: 10px;
   padding: 10px 5px;
@@ -1488,40 +1257,41 @@ html.dark .holidays-chronology__item-info {
   height: -moz-max-content;
   height: max-content;
   overflow-y: auto;
+  overflow-x: hidden;
   margin-bottom: 4.0625rem;
 }
 
-.holidays-popup .holidays-content::-webkit-scrollbar {
+.information-popup .information-content::-webkit-scrollbar {
   width: 4px;
   background-color: #809ce5;
 }
 
-.holidays-popup .holidays-content::-webkit-scrollbar-thumb {
+.information-popup .information-content::-webkit-scrollbar-thumb {
   background-color: #a2e0f4;
 }
 
-.holidays-popup .holidays-content__item {
+.information-popup .information-content__item {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 122.2222222222%;
   color: #000000;
 }
 
-.holidays-popup .holidays-content__item:not(:last-child) {
+.information-popup .information-content__item:not(:last-child) {
   margin-bottom: 0.3125rem;
 }
 
-.holidays-popup .holidays-content .holidays-content-item-holidays {
+.information-popup .information-content .information-content-item-holidays {
   padding: 0 10px;
 }
 
-.holidays-popup .holidays-content .item-event-tab {
-  cursor: pointer;
+.information-popup .information-content .item-event-tab {
   display: flex;
   flex-direction: column;
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-header {
+.information-popup .information-content .item-event-tab .item-header {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -1533,7 +1303,7 @@ html.dark .holidays-chronology__item-info {
   padding: 10px 10px;
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-header__content {
+.information-popup .information-content .item-event-tab .item-header__content {
   flex: 1 1 auto;
   display: flex;
   justify-content: space-between;
@@ -1542,26 +1312,31 @@ html.dark .holidays-chronology__item-info {
   align-items: center;
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-header__content-date {
+.information-popup .information-content .item-event-tab .item-header__content-date {
   text-align: start;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-header__content-event {
+.information-popup .information-content .item-event-tab .item-header__content-event {
   text-align: end;
+  word-wrap: break-word;
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-header__button {
+.information-popup .information-content .item-event-tab .item-header__button {
   flex: 0 0 20px;
   height: 20px;
   display: block;
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-header__button img {
+.information-popup .information-content .item-event-tab .item-header__button img {
   transition: all 0.3s ease;
   transform: rotateZ(0deg);
 }
 
-.holidays-popup .holidays-content .item-event-tab .item-content {
+.information-popup .information-content .item-event-tab .item-content {
   background-color: #a2e0f4;
   color: #000;
   height: 0;
@@ -1572,16 +1347,20 @@ html.dark .holidays-chronology__item-info {
   transition: all 0.2s ease;
 }
 
-.holidays-popup .holidays-content .item-event-tab.tab-active .item-header {
+.information-popup .information-content .item-event-tab .item-content__text a {
+  color: #3569ee;
+}
+
+.information-popup .information-content .item-event-tab.tab-active .item-header {
   border-radius: 10px 10px 0 0;
 }
 
-.holidays-popup .holidays-content .item-event-tab.tab-active .item-header__button img {
+.information-popup .information-content .item-event-tab.tab-active .item-header__button img {
   transition: all 0.3s ease;
   transform: rotateZ(180deg);
 }
 
-.holidays-popup .holidays-content .item-event-tab.tab-active .item-content {
+.information-popup .information-content .item-event-tab.tab-active .item-content {
   width: 100%;
   height: auto;
   opacity: 1;
@@ -1590,20 +1369,45 @@ html.dark .holidays-chronology__item-info {
   border-radius: 0 0 10px 10px;
 }
 
-.holidays-popup .holidays-chronology {
+.information-popup .information-content .item-event-tab-upcoming .item-header {
+  background-color: #688ce6;
+  color: #fff;
+}
+
+.information-popup .events-information-content {
+  background: #809ce5;
+  border-radius: 10px;
+  padding: 10px 5px;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  max-height: 360px;
+  overflow-y: auto;
+  margin-bottom: 4.0625rem;
+}
+
+.information-popup .events-information-content .events-content__item:not(:last-child) {
+  margin-bottom: 0.4375rem;
+}
+
+.information-popup .events-information-content .item-header__content-event {
+  max-width: 400px;
+}
+
+.information-popup .information-chronology {
   margin-top: auto;
   width: 100%;
   max-width: 600px;
 }
 
-.holidays-popup .holidays-chronology__line {
+.information-popup .information-chronology__line {
   width: 100%;
   height: 2px;
   background-color: #000000;
   position: relative;
 }
 
-.holidays-popup .holidays-chronology__line .holidays-chronology-proggress {
+.information-popup .information-chronology__line .information-chronology-proggress {
   position: absolute;
   left: 0;
   top: 0;
@@ -1612,7 +1416,7 @@ html.dark .holidays-chronology__item-info {
   background-color: #809ce5;
 }
 
-.holidays-popup .holidays-chronology__item {
+.information-popup .information-chronology__item {
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
@@ -1626,7 +1430,7 @@ html.dark .holidays-chronology__item-info {
   border-radius: 8px;
 }
 
-.holidays-popup .holidays-chronology__item-info {
+.information-popup .information-chronology__item-info {
   display: none;
   position: absolute;
   top: -100%;
@@ -1639,6 +1443,247 @@ html.dark .holidays-chronology__item-info {
   width: max-content;
   padding: 2px 6px;
   transform: translateX(-50%);
+}
+
+.change-theme {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+html.dark {
+  background-color: #010101;
+}
+
+html.dark .change-theme {
+  background: url("/img/sun.svg") 0 0/100% no-repeat;
+}
+
+html.light .change-theme {
+  background: url("/img/moon.svg") 0 0/100% no-repeat;
+}
+
+html.dark .message-button {
+  background-color: #2d2f34;
+}
+
+html.dark .choosed-lesson-by-teacher {
+  color: #010101;
+  background-color: #b0c4de;
+}
+
+html.dark header,
+html.dark footer {
+  background-color: #383b40;
+}
+
+html.dark main,
+html.dark html {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #1f2023;
+}
+
+html.dark .toggler {
+  background-color: #93aae5;
+}
+
+html.dark .toggler__button {
+  background-color: #809ce5;
+}
+
+html.dark .dropdown {
+  color: #27292d;
+}
+
+html.dark .dropdown__button {
+  background-color: #809ce5;
+}
+
+html.dark .dropdown__button-text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+html.dark .dropdown__list {
+  background: #ffffff;
+}
+
+html.dark .dropdown__list::-webkit-scrollbar {
+  background-color: inherit;
+}
+
+html.dark .dropdown__list::-webkit-scrollbar-track {
+  background-color: #809ce5;
+}
+
+html.dark .dropdown__list::-webkit-scrollbar-thumb {
+  background-color: #b0c4de;
+}
+
+html.dark .dropdown__list-item {
+  background-color: #809ce5;
+}
+
+html.dark .dropdown__list-item:hover {
+  background: #91aef5;
+}
+
+html.dark .contacts-footer__title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .schedule-block {
+  background-color: #27292d;
+}
+
+html.dark .schedule-block .schedule-block-header {
+  background: #2d2f34;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .schedule-block .schedule-block-body__week .week__title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .schedule-block .schedule-block-body__week .day {
+  background-color: #383b40;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .schedule-block .schedule-block-body__week .day__title {
+  background-color: #27292d;
+  color: #ffffff;
+}
+
+html.dark .schedule-block .schedule-block-body__week .day .current-pair {
+  background: #809ce5;
+  color: #101010;
+}
+
+html.dark .schedule-block .schedule-block-body__week .current-day .day__title {
+  background: #809ce5;
+  color: #101010;
+}
+
+html.dark .schedule-block .schedule-block-body__week .next-day .day__title {
+  background-color: #d57279;
+}
+
+html.dark .schedule-block .current-week {
+  background-color: #323539;
+}
+
+html.dark .hero-sidebar .sidebar-nav {
+  background-color: #2d2f34;
+}
+
+html.dark .hero-sidebar .bell-schedule {
+  background-color: #2d2f34;
+}
+
+html.dark .hero-sidebar .bell-schedule__header {
+  background-color: #27292d;
+}
+
+html.dark .hero-sidebar .bell-schedule__header-title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: rgb(255, 255, 255);
+}
+
+html.dark .hero-sidebar .bell-schedule .bell-schedule-content__row {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .hero-sidebar .upcoming-events {
+  background-color: #2d2f34;
+}
+
+html.dark .hero-sidebar .upcoming-events__header {
+  background-color: #27292d;
+}
+
+html.dark .hero-sidebar .upcoming-events__header-title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: rgb(255, 255, 255);
+}
+
+html.dark .hero-sidebar .upcoming-events .upcoming-events-content {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .hero-sidebar .upcoming-events .upcoming-events-content .upcoming-events-item__button {
+  color: #000;
+}
+
+html.dark .popup-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+html.dark .information-popup {
+  background-color: #383b40;
+}
+
+html.dark .information-popup__text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .information-popup .information-content {
+  background: #2d2f34;
+}
+
+html.dark .information-popup .information-content::-webkit-scrollbar {
+  width: 4px;
+  background-color: #525252;
+}
+
+html.dark .information-popup .information-content::-webkit-scrollbar-thumb {
+  background-color: #252629;
+}
+
+html.dark .information-popup .information-content__item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .information-popup .item-event-tab .item-header {
+  background-color: #27292d;
+  color: #ffffff;
+}
+
+html.dark .information-popup .item-event-tab .item-content {
+  background-color: #383b40;
+  color: #fff;
+}
+
+html.dark .information-popup .item-event-tab .item-content__text a {
+  color: #dae839;
+}
+
+html.dark .information-popup .item-event-tab-upcoming .item-header {
+  background-color: #809ce5;
+  color: #000;
+}
+
+html.dark .information-chronology__line {
+  background-color: #000000;
+}
+
+html.dark .information-chronology__line .information-chronology-proggress {
+  background-color: #809ce5;
+}
+
+html.dark .information-chronology__item {
+  background: #2d2f34;
+  border: 0.3px solid #000000;
+}
+
+html.dark .information-chronology__item-info {
+  background: #2d2f34;
+  border: 0.3px solid #000000;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .header {
@@ -2004,10 +2049,6 @@ html.dark .holidays-chronology__item-info {
 }
 
 @media (max-width: 1280px) {
-  html.dark .hero-sidebar {
-    background-color: #2d2f34;
-  }
-
   .hero__content {
     flex-direction: column-reverse;
   }
@@ -2042,12 +2083,23 @@ html.dark .holidays-chronology__item-info {
   .dropdown {
     flex: 1 1 auto;
   }
+
+  html.dark .hero-sidebar {
+    background-color: #2d2f34;
+  }
 }
 
 @media (max-width: 850px) {
   #extraclasses-page .extraclasses-content .schedule-block-body__week .week__content {
     justify-content: center;
     grid-template-columns: repeat(1, minmax(0, 620px));
+  }
+}
+
+@media (max-width: 768px) {
+  .information-popup .information-content .item-event-tab .item-header__content-date {
+    flex-direction: column;
+    align-items: normal;
   }
 }
 
@@ -2059,7 +2111,7 @@ html.dark .holidays-chronology__item-info {
 }
 
 @media (max-width: 425px) {
-  .holidays-popup .holidays-popup-body__main {
+  .information-popup .information-popup-body__main {
     padding: 40px 5px 60px 5px;
   }
 
@@ -2075,13 +2127,13 @@ html.dark .holidays-chronology__item-info {
 }
 
 @media (max-width: 80rem) {
+  .toggler {
+    max-width: 100%;
+  }
+
   .change-theme {
     top: -10px;
     right: 0;
-  }
-
-  .toggler {
-    max-width: 100%;
   }
 }
 
@@ -2104,10 +2156,6 @@ html.dark .holidays-chronology__item-info {
 }
 
 @media (max-width: 47.99875em) {
-  html.dark .menu-header {
-    background-color: rgba(1, 1, 1, 0.7);
-  }
-
   .schedule-block .schedule-block-body .schedule-block-body__week {
     max-width: 560px;
   }
@@ -2115,6 +2163,10 @@ html.dark .holidays-chronology__item-info {
   .schedule-block .schedule-block-body .schedule-block-body__week .week__content {
     justify-content: center;
     grid-template-columns: repeat(1, minmax(0, 620px));
+  }
+
+  html.dark .menu-header {
+    background-color: rgba(1, 1, 1, 0.7);
   }
 
   .header .header__burger {
