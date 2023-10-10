@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20230502125314" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231010135201" />
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -34,107 +34,6 @@
 </head>
 
   <body>
-    <!-- <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyC3-DKAqn361fKip4OZFhCexErgYLnSHgI",
-        authDomain: "schedule-cd651.firebaseapp.com",
-        projectId: "schedule-cd651",
-        storageBucket: "schedule-cd651.appspot.com",
-        messagingSenderId: "328836822913",
-        appId: "1:328836822913:web:4fd895ac96c6a66628da80",
-        measurementId: "G-MC7H5WVS76",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      import {
-        getAuth,
-        GoogleAuthProvider,
-        signInWithPopup,
-        signOut,
-      } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-      const auth = getAuth(app);
-      const provider = new GoogleAuthProvider();
-
-      async function logIn() {
-        signInWithPopup(auth, provider)
-          .then((result) => {
-            const user = result.user;
-            // console.log(user);
-            showUserName(user);
-          })
-          .catch(() => {
-            document
-              .getElementById("login")
-              .addEventListener("click", logIn, { once: true });
-          });
-      }
-
-      async function logOut() {
-        // console.log("before exit");
-        signOut(auth).then(() => {
-          // console.log("after");
-          document.getElementById("login").innerText = "Увійти";
-          document.getElementById("userName").innerText = "Привіт, немісцевий!";
-          document
-            .getElementById("login")
-            .addEventListener("click", logIn, { once: true });
-        });
-      }
-
-      // document.getElementById("login").addEventListener(
-      //   "click",
-      //   function () {
-      //     console.log("clicked");
-      //   },
-      //   { once: true }
-      // );
-
-      document
-        .getElementById("login")
-        .addEventListener("click", logIn, { once: true });
-      /* .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        showUserName(user);
-        //console.log(user);
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
-      }).catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
-      } */
-
-      //signInWithPopup();
-      // })
-
-      function showUserName(user) {
-        document.getElementById("userName").innerText = user.displayName;
-        document.getElementById("login").innerText = "Вийти";
-        document
-          .getElementById("login")
-          .addEventListener("click", logOut, { once: true });
-      }
-    </script> -->
-
     <header id="header" class="header">
   <div class="header__container">
     <div class="header__content">
@@ -142,26 +41,17 @@
         <img src="img/logo.png" alt="logo" />
       </a>
       <div class="header__navigation navigation-header">
-        <div class="header__menu menu-header">
-          <div class="menu-header__content">
-            <!-- <a class="nav-header__button" id="userName">Привіт, немісцевий!</a> -->
-            <a class="students menu-header__button">Учню</a>
-            <a class="teachers menu-header__button">Викладачу</a>
-            <a class="extraclasses menu-header__button">Додаткові </a>
-            <!-- <a class="extraclasses nav-header__button" id="login">Увійти</a> -->
-          </div>
-        </div>
         <div class="header__buttons buttons-header">
           <div class="buttons-header__item header__controls controls-header">
             <div class="controls-header__item item-calendar">
               <img src="img/calendar.svg" alt="" />
             </div>
-            <div class="controls-header__item item-login">
+            <div class="controls-header__item item-login open-login">
               <img src="img/login.svg" alt="" />
-              <span class="soon">soon</span>
+              <!-- <span class="soon">soon</span> -->
             </div>
           </div>
-          <div class="buttons-header__item header__burger">
+          <div class="buttons-header__item header__burger" id="header__burger">
             <div class="header__burger-line header__burger-line-1"></div>
             <div class="header__burger-line header__burger-line-2"></div>
             <div class="header__burger-line header__burger-line-3"></div>
@@ -171,6 +61,101 @@
     </div>
   </div>
 </header>
+ <div class="mobile-menu">
+  <div class="mobile-menu__container">
+    <div class="mobile-menu__content">
+      <div class="mobile-menu__header menu-header">
+        <div class="menu-header__close menu-close">
+          <div class="menu-close__line"></div>
+          <div class="menu-close__line"></div>
+        </div>
+      </div>
+      <div class="mobile-menu__body menu-body">
+        <div class="menu-body__item students">Учню</div>
+        <div class="menu-body__item teachers">Викладачу</div>
+        <div class="menu-body__item extraclasses">Гуртки та Консультації</div>
+        <!-- <div class="menu-body__item">Консультації</div> -->
+        <!-- <div class="menu-body__item">Анонси та події</div> -->
+        <!-- <div class="menu-body__item">Журнал відвідувань</div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <header id="header" class="header">
+  <div class="header__container">
+    <div class="header__content">
+      <a href="" class="header__logo">
+        <img src="img/logo.png" alt="logo" />
+      </a>
+      <div class="header__navigation navigation-header">
+        <div class="header__buttons buttons-header">
+          <div class="buttons-header__item header__controls controls-header">
+            <div class="controls-header__item item-calendar">
+              <img src="img/calendar.svg" alt="" />
+            </div>
+            <div class="controls-header__item item-login open-login">
+              <img src="img/login.svg" alt="" />
+              <!-- <span class="soon">soon</span> -->
+            </div>
+          </div>
+          <div class="buttons-header__item header__burger" id="header__burger">
+            <div class="header__burger-line header__burger-line-1"></div>
+            <div class="header__burger-line header__burger-line-2"></div>
+            <div class="header__burger-line header__burger-line-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <div class="login" type="login" id="login-form">
+  <div class="login__container">
+    <div class="login__content">
+      <div class="login__header login-header">
+        <div class="login-header__close login-close">
+          <div class="login-close__line"></div>
+          <div class="login-close__line"></div>
+        </div>
+      </div>
+      <div class="login__body login-body">
+        <div class="login__form form-login">
+          <ul class="form-login__mode">
+            <li class="form-mode-registration active">Реєстрація</li>
+            <li class="form-mode-login">Вхід</li>
+          </ul>
+          <div class="form-login__content form-content">
+            <input
+              type="text"
+              placeholder="Вкажіть ваше ПІБ"
+              name=""
+              class="form-content__item"
+            />
+            <input
+              type="email"
+              placeholder="Ваш e-mail"
+              name=""
+              class="form-content__item"
+            />
+            <input
+              type="password"
+              placeholder="Ваш пароль"
+              name=""
+              class="form-content__item"
+            />
+            <input
+              type="text"
+              name=""
+              placeholder="Код куратора"
+              class="form-content__item form-item-purple"
+            />
+          </div>
+          <button class="form-login__sumbit">Зареєструватись</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="wrapper">
       <main id="main-page" class="page students-page_main">
@@ -630,7 +615,8 @@
   </div> -->
 </footer>
 
-    <script src="js/app.min.js?_v=20230502125314" defer></script>
+
+    <script src="js/app.min.js?_v=20231010135201" defer></script>
     <div class="page-loading">
       <div class="page-loading__content">
         <img
