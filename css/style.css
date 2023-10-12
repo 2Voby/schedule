@@ -1478,11 +1478,11 @@ html.dark {
 }
 
 html.dark .change-theme {
-  background: url("/img/sun.svg") 0 0/100% no-repeat;
+  background: url("../img/sun.svg") 0 0/100% no-repeat;
 }
 
 html.light .change-theme {
-  background: url("/img/moon.svg") 0 0/100% no-repeat;
+  background: url("../img/moon.svg") 0 0/100% no-repeat;
 }
 
 html.dark .message-button {
