@@ -1206,7 +1206,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  background-color: RGB(176, 196, 222);
+  background-color: #fcfdfd;
   z-index: 52;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -1248,7 +1248,7 @@ html {
   font-weight: 400;
   font-size: 2rem;
   line-height: 84.2105263158%;
-  color: #ffffff;
+  color: #010101;
   margin-bottom: 2.5rem;
 }
 
@@ -1266,7 +1266,7 @@ html {
 
 .information-popup .information-content {
   position: relative;
-  background: #809ce5;
+  background: #fcfdfd;
   border-radius: 10px;
   padding: 10px 5px;
   width: 100%;
@@ -1283,11 +1283,11 @@ html {
 
 .information-popup .information-content::-webkit-scrollbar {
   width: 4px;
-  background-color: #809ce5;
+  background-color: #fcfdfd;
 }
 
 .information-popup .information-content::-webkit-scrollbar-thumb {
-  background-color: #a2e0f4;
+  background-color: #fcfdfd;
 }
 
 .information-popup .information-content__item {
@@ -1308,6 +1308,7 @@ html {
 .information-popup .information-content .item-event-tab {
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .information-popup .information-content .item-event-tab .item-header {
@@ -1318,7 +1319,7 @@ html {
   align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  background-color: #76d2f0;
+  background-color: #eff0f0;
   border-radius: 10px 10px 10px 10px;
   padding: 10px 10px;
 }
@@ -1357,7 +1358,7 @@ html {
 }
 
 .information-popup .information-content .item-event-tab .item-content {
-  background-color: #a2e0f4;
+  background-color: #fcfdfd;
   color: #000;
   height: 0;
   opacity: 0;
@@ -1389,13 +1390,21 @@ html {
   border-radius: 0 0 10px 10px;
 }
 
+.information-popup .information-content .item-event-tab-upcoming {
+  border: 0.5px solid #000;
+}
+
 .information-popup .information-content .item-event-tab-upcoming .item-header {
-  background-color: #688ce6;
-  color: #fff;
+  background-color: #c8ffa6;
+  color: #000000;
+}
+
+.information-popup .information-content .item-event-tab-upcoming .item-content {
+  background-color: #ecffdf;
 }
 
 .information-popup .events-information-content {
-  background: #809ce5;
+  background: #dadada;
   border-radius: 10px;
   padding: 10px 5px;
   width: 100%;
@@ -1637,6 +1646,8 @@ html.dark .hero-sidebar .upcoming-events .upcoming-events-content {
 
 html.dark .hero-sidebar .upcoming-events .upcoming-events-content .upcoming-events-item__button {
   color: #000;
+  background: #809ce5;
+  border: 0.5px solid #000000;
 }
 
 html.dark .popup-wrapper {
