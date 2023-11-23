@@ -1,321 +1,824 @@
 <!DOCTYPE html>
-<html id="html" lang="en">
+<html class="" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20230204225810" />
-    <title></title>
-  </head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231123102737" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="img/favicon/faviocon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="img/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="img/favicon/favicon-16x16.png"
+  />
+
+  <link
+    rel="mask-icon"
+    href="img/favicon/safari-pinned-tab.svg"
+    color="#5bbad5"
+  />
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css?_v=20231123102737" rel="stylesheet" />
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Розклад уроків</title>
+</head>
 
   <body>
-    <header class="header"></header>
+    <header id="header" class="header">
+  <div class="header__container">
+    <div class="header__content">
+      <a href="" class="header__logo">
+        <img src="img/logo.png" alt="logo" />
+      </a>
+      <div class="header__navigation navigation-header">
+        <div class="header__buttons buttons-header">
+          <div class="buttons-header__item header__controls controls-header">
+            <div class="controls-header__item item-calendar">
+              <img src="img/calendar.svg" alt="" />
+            </div>
+            <div class="controls-header__item item-login open-login">
+              <img src="img/login.svg" alt="" />
+              <div class="open-login__click-box"></div>
+              <!-- <span class="soon">soon</span> -->
+            </div>
+          </div>
+          <div class="buttons-header__item header__burger" id="header__burger">
+            <div class="header__burger-line header__burger-line-1"></div>
+            <div class="header__burger-line header__burger-line-2"></div>
+            <div class="header__burger-line header__burger-line-3"></div>
+            <div class="burger-click-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <div class="mobile-menu">
+  <div class="mobile-menu__container">
+    <div class="mobile-menu__content">
+      <div class="mobile-menu__header menu-header">
+        <div class="menu-header__close menu-close">
+          <div class="menu-close__line"></div>
+          <div class="menu-close__line"></div>
+        </div>
+      </div>
+      <div class="mobile-menu__body menu-body">
+        <div class="menu-body__item students">Учню</div>
+        <div class="menu-body__item teachers">Викладачу</div>
+        <div class="menu-body__item extraclasses">Гуртки та Консультації</div>
+        <!-- <div class="menu-body__item">Консультації</div> -->
+        <!-- <div class="menu-body__item">Анонси та події</div> -->
+        <!-- <div class="menu-body__item">Журнал відвідувань</div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="login" type="login" id="login-form">
+  <div class="login__container">
+    <div class="login__content">
+      <div class="login__header login-header">
+        <div class="login-header__close login-close">
+          <div class="login-close__line"></div>
+          <div class="login-close__line"></div>
+        </div>
+      </div>
+      <div class="login__body login-body">
+        <div class="login__form form-login">
+          <ul class="form-login__mode">
+            <li
+              auth-type="reg"
+              class="form-login__mode-button form-mode-registration"
+            >
+              Реєстрація
+            </li>
+            <li
+              auth-type="log"
+              class="form-login__mode-button form-mode-login active"
+            >
+              Вхід
+            </li>
+          </ul>
+          <div class="form-login__content form-content">
+            <input
+              type="text"
+              placeholder="Вкажіть ваше ПІБ"
+              name=""
+              class="form-content__item"
+            />
+            <input
+              type="email"
+              placeholder="Ваш e-mail"
+              name=""
+              class="form-content__item"
+            />
+            <input
+              type="password"
+              placeholder="Ваш пароль"
+              name=""
+              class="form-content__item"
+            />
+            <input
+              type="text"
+              name=""
+              placeholder="Код куратора"
+              class="form-content__item form-item-purple"
+            />
+            <button class="form-login__sumbit">Зареєструватись</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="wrapper">
-      <!DOCTYPE html>
-      <html id="html" lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <link rel="stylesheet" href="css/style.css?_v=20230204225810" />
-          <title></title>
-        </head>
+      <main id="main-page" class="page students-page_main">
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__content-wrapper">
+          <div class="hero-content__schedule-block schedule-block">
+            <div class="hero-content__date-of-update date-of-update">
+              <span class="date-of-update__text">Останнє оновлення:</span>
+              <span class="date-of-update__time"></span>
+            </div>
+            <div class="schedule-block__header schedule-block-header">
+              <h3 class="schedule-block-header__group hidden">
+                <img class="icon title-icon" src="img/group-icon.svg" alt="" />
+                <span class="schedule-block-header__group-text"></span>
+              </h3>
+              <div class="schedule-block-header__curr">
+                <div class="schedule-block-header__week"></div>
+                <div class="schedule-block-header__day"></div>
+              </div>
+            </div>
 
-        <body>
-          <header class="header"></header>
+            <div
+              id="schedule-block-body"
+              class="schedule-block__body schedule-block-body"
+            >
+              <div class="schedule-body__popup schedule-popup d-none">
+                <div class="schedule-popup__body"></div>
+              </div>
+            </div>
+            <!-- <div class="schedule-block-news">
+            УВАГА! у звязку з повітряними тривогами, розклад може бути зміненим
+          </div> -->
+            <!-- append content from js -->
+          </div>
 
-          <div class="wrapper">
-            <main>
-              <div class="game-background">
-                <div class="game-scene">
-                  <div class="game-scene__header game-header">
-                    <div class="game-header__time">09:00</div>
-                    <div class="game-header__logo"><p>Vidroid</p></div>
-                    <div class="game-header__icons">
-                      <img src="img/mail.svg" alt="" /><img
-                        src="img/wifi.svg"
+          <div class="hero-content__sidebar hero-sidebar">
+            <div class="hero-sidebar__navigation sidebar-nav">
+              <a class="change-theme"></a>
+              <div class="sidebar-nav__item">
+                <div class="title-block">
+                  <img src="img/schedule-img.svg" alt="" />
+                  <h3>Розклад</h3>
+                </div>
+                <div class="toggler-button">
+                  <label
+                    for="toggle"
+                    class="change-schedule-toggler toggler toggler-block"
+                  >
+                    <span class="toggler__text toggler__text-left"
+                      >Поточний</span
+                    >
+                    <input
+                      type="checkbox"
+                      id="toggle"
+                      class="toggle choose-curr-week__toggle"
+                    />
+                    <div class="toggler__button"></div>
+                    <span class="toggler__text toggler__text-right">Весь</span>
+                  </label>
+                </div>
+              </div>
+              <div class="sidebar-nav__item">
+                <div class="title-block">
+                  <img src="img/choose-group-icon.svg" alt="" />
+                  <h3>Оберіть групу</h3>
+                </div>
+                <div class="sidebar-nav__item-row">
+                  <div class="dropdown dropdown-group">
+                    <button class="dropdown__button">
+                      <p
+                        class="dropdown__button-text dropdown-group__button-text"
+                      ></p>
+                      <img
+                        class="dropdown__button-img"
+                        src="img/arrow.svg"
                         alt=""
-                      /><img src="img/battery.svg" alt="" />
-                    </div>
+                      />
+                    </button>
+                    <ul class="dropdown__list dropdown-list__groups"></ul>
                   </div>
-                  <div class="game-scene__body game-body">
-                    <div class="game-body__main-screen page main-screen">
-                      <h2 class="main-screen__title">
-                        "Hey, wannabe hacker, try to crack into my system!!"
-                      </h2>
-                      <div class="main-screen__img">
-                        <img src="img/main-screen-img.png" alt="" />
-                      </div>
-                      <div class="main-screen__start-button">
-                        <p>START HACKING</p>
-                        <img src="img/game-button.svg" alt="" />
-                      </div>
-                      <div class="main-screen__hard-block hard-block">
-                        <div
-                          complexity="easy"
-                          class="hard-block__button active level-easy"
-                        >
-                          Easy NOOBIE
-                        </div>
-                        <div
-                          complexity="medium"
-                          class="hard-block__button level-medium"
-                        >
-                          Normal PC user
-                        </div>
-                        <div
-                          complexity="hard"
-                          class="hard-block__button level-hard"
-                        >
-                          Hard True hacker
-                        </div>
-                      </div>
-                      <div class="main-screen__help-buttons help-buttons">
-                        <div
-                          class="help-buttons__button help-buttons__button-settings"
-                        >
-                          <img src="img/settings.svg" alt="" />
-                        </div>
-                        <div
-                          class="help-buttons__button help-buttons__button-questions"
-                        >
-                          <img src="img/questions.svg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="game-body__game-level page game-level">
-                      <h2 class="game-level__title"></h2>
-                      <div class="game-level__image">
-                        <img src="img/task-image.png" alt="" />
-                      </div>
-                      <div class="game-level__answers-block"></div>
-                      <div class="game-level__interface interface">
-                        <div class="interface__inventory inventory">
-                          <div class="inventory__item"></div>
-                          <div class="inventory__item"></div>
-                          <div class="inventory__item"></div>
-                          <div class="inventory__item"></div>
-                          <div class="inventory__item"></div>
-                        </div>
-                        <div class="interface__map">
-                          <img src="img/map-icon.png" alt="map" />
-                        </div>
-                      </div>
-                      <div
-                        class="game-level__popup-wrapper game-level__popup-hidden"
-                      >
-                        <div class="game-level__popup">
-                          <h2 class="game-level__popup-title"></h2>
-                          <!-- <a class="game-level__popup-button">Move on</a> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="game-body__map game-map game-map-hidden">
-                      <div class="game-map__content">
-                        <div class="close-map-button">x</div>
-                        <div class="game-map__item-start">Start Hacking</div>
-                        <div
-                          lvl="1"
-                          numinarr=""
-                          class="game-map__item game-map__item-1 question lvl lvl-1"
-                        >
-                          <img src="img/1.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="2"
-                          numinarr=""
-                          class="game-map__item game-map__item-2 question lvl lvl-2 game-item-key game-item-key-1"
-                        >
-                          <img src="img/key.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="3"
-                          numinarr=""
-                          class="game-map__item game-map__item-3 question lvl lvl-3"
-                        >
-                          <img src="img/2.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="4"
-                          numinarr=""
-                          class="game-map__item game-map__item-4 question lvl lvl-4"
-                        >
-                          <img src="img/3.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="5"
-                          numinarr=""
-                          class="game-map__item game-map__item-5 question lvl lvl-5"
-                        >
-                          <img src="img/4.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="6"
-                          numinarr=""
-                          class="game-map__item game-map__item-6 question lvl lvl-6 game-item-key game-item-key-2"
-                        >
-                          <img src="img/key.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="7"
-                          numinarr=""
-                          class="game-map__item game-map__item-7 question lvl lvl-7"
-                        >
-                          <img src="img/5.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="8"
-                          numinarr=""
-                          class="game-map__item game-map__item-8 question lvl lvl-8"
-                        >
-                          <img src="img/6.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="9"
-                          numinarr=""
-                          class="game-map__item game-map__item-9 question lvl lvl-9"
-                        >
-                          <img src="img/7.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="10"
-                          numinarr=""
-                          class="game-map__item game-map__item-10 question lvl lvl-10 game-item-key game-item-key-3"
-                        >
-                          <img src="img/key.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="11"
-                          numinarr=""
-                          class="game-map__item game-map__item-11 question lvl lvl-11"
-                        >
-                          <img src="img/8.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="12"
-                          numinarr=""
-                          class="game-map__item game-map__item-12 question lvl lvl-12"
-                        >
-                          <img src="img/9.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="13"
-                          numinarr=""
-                          class="game-map__item game-map__item-13 question lvl lvl-13"
-                        >
-                          <img src="img/10.svg" alt="" />
-                        </div>
-                        <div
-                          lvl="14"
-                          numinarr=""
-                          class="game-map__item game-map__item-14 question lvl lvl-14 game-item-key game-item-key-4"
-                        >
-                          <img src="img/key.svg" alt="" />
-                        </div>
-                        <div
-                          class="game-map__item game-map__item-15 game-item-lock"
-                        >
-                          <img src="img/lock.svg" alt="" />
-                        </div>
-                        <div
-                          class="game-map__item game-map__item-16 game-item-lock"
-                        >
-                          <img src="img/lock.svg" alt="" />
-                        </div>
-                        <div
-                          class="game-map__item game-map__item-17 game-item-lock"
-                        >
-                          <img src="img/lock.svg" alt="" />
-                        </div>
-                        <div
-                          class="game-map__item game-map__item-18 game-item-lock"
-                        >
-                          <img src="img/lock.svg" alt="" />
-                        </div>
-                        <div
-                          class="game-map__item game-map__item-19 game-item-finally-boss"
-                        >
-                          <img src="img/main-boss.svg" alt="" />
-                        </div>
-                        <span class="map__root-1 map__root"></span>
-                        <span class="map__root-2 map__root"></span>
-                        <span class="map__root-3 map__root"></span>
-                        <span class="map__root-4 map__root"></span>
-                        <span class="map__root-5 map__root"></span>
-                        <span class="map__root-6 map__root"></span>
-                        <span class="map__root-7 map__root"></span>
-                        <span class="map__root-8 map__root"></span>
-                        <span class="map__root-9 map__root"></span>
-                        <span class="map__root-10 map__root"></span>
-                        <span class="map__root-11 map__root"></span>
-                        <span class="map__root-12 map__root"></span>
-                        <span class="map__root-13 map__root"></span>
-                        <span class="map__root-14 map__root"></span>
-                        <span class="map__root-15 map__root"></span>
-                        <span class="map__root-16 map__root"></span>
-                        <span class="map__root-17 map__root"></span>
-                        <span class="map__root-18 map__root"></span>
-                        <span class="map__root-19 map__root"></span>
-                        <span class="map__root-20 map__root"></span>
-                        <span class="map__root-21 map__root"></span>
-                        <span class="map__root-22 map__root"></span>
-                        <span class="map__root-23 map__root"></span>
-                        <span class="map__root-24 map__root"></span>
-                        <span class="map__root-25 map__root"></span>
-                      </div>
-                    </div>
-                    <div class="page settings">
-                      <h2 class="main-screen__title settings__title">
-                        Settings
-                      </h2>
-
-                      <div class="settings__volume">
-                        <img width="24px" src="img/audio.png" alt="audio" />
-                        <input type="range" />
-                      </div>
-
-                      <button class="settings__quit-settings">Go back</button>
-                    </div>
-                    <!-- TURBO NEW -->
-                    <div class="page about">
-                      <h2 class="about__title">Mage by:</h2>
-
-                      <ul class="about__developers">
-                        <li>2Voby</li>
-                        <!-- <li>Skyroonn</li>
-                        <li>turboBEST_</li>
-                        <li>eLWUGRA</li>
-                        <li>vAREZKA</li> -->
-                      </ul>
-
-                      <button class="settings__quit-settings">Go back</button>
-                    </div>
+                  <div class="sidebar-save-option-button">
+                    <img src="img/button-save.png" alt="" />
                   </div>
                 </div>
-                <!-- <div class="bg-video-container"> -->
-                <video src="files/video/video.mp4" muted autoplay loop></video>
-                <!-- </div> -->
               </div>
-            </main>
-          </div>
-          <footer class="footer">
-            <div class="footer__container">
-              <div class="footer__content"></div>
+              <div class="sidebar-nav__item sidebar-nav__item-week">
+                <div class="title-block">
+                  <img src="img/choose-week-icon.svg" alt="" />
+                  <h3>Оберіть тиждень</h3>
+                </div>
+                <div class="dropdown dropdown-week dropdown__block-week">
+                  <button class="dropdown__button">
+                    <p class="dropdown__button-text"></p>
+                    <img
+                      class="dropdown__button-img"
+                      src="img/arrow.svg"
+                      alt=""
+                    />
+                  </button>
+                  <ul class="dropdown__list dropdown-list__week"></ul>
+                </div>
+              </div>
             </div>
-          </footer>
-        </body>
-      </html>
+
+            <div class="hero-sidebar-information">
+              <div class="hero-sidebar__schedule bell-schedule">
+                <div class="bell-schedule__header">
+                  <img
+                    class="bell-schedule__header-img"
+                    src="img/bell-icon.svg"
+                    alt="bell"
+                  />
+                  <h2 class="bell-schedule__header-title">Розклад дзвінків</h2>
+                </div>
+                <div class="bell-schedule__content bell-schedule-content"></div>
+              </div>
+              <div class="hero-sidebar__events upcoming-events">
+                <div class="upcoming-events__header">
+                  <h2 class="upcoming-events__header-title">Найближчі події</h2>
+                </div>
+                <div class="upcoming-events__content upcoming-events-content">
+                  <!-- <div
+                    class="upcoming-events-content__item upcoming-events-item"
+                  >
+                    <div class="upcoming-events-item__content">
+                      <div class="upcoming-events-item__date-and-time">
+                        06.04.2023 13.30
+                      </div>
+                      <div class="upcoming-events-item__name">
+                        Конференція в університеті
+                      </div>
+                    </div>
+
+                    <div class="upcoming-events-item__button">інформація</div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+ <main id="extraclasses-page" class="page extraclasses-page_main page-hidden">
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__content-wrapper">
+          <div class="hero-content__schedule-block schedule-block">
+            <div class="hero-content__date-of-update date-of-update">
+              <span class="date-of-update__text">Останнє оновлення:</span>
+              <span class="date-of-update__time"></span>
+            </div>
+            <div class="schedule-block__header schedule-block-header">
+              <div class="schedule-block-header__curr">
+                <div class="schedule-block-header__week"></div>
+                <div class="schedule-block-header__day"></div>
+              </div>
+            </div>
+
+            <div
+              id="schedule-block-body"
+              class="schedule-block__body schedule-block-body"
+            ></div>
+            <!-- append content from js -->
+          </div>
+          <div class="hero-content__sidebar hero-sidebar">
+            <div class="hero-sidebar__navigation sidebar-nav">
+              <button class="change-theme"></button>
+              <div class="sidebar-nav__item">
+                <div class="title-block">
+                  <img src="img/schedule-img.svg" alt="" />
+                  <h3>Розклад</h3>
+                </div>
+                <div class="toggler-button">
+                  <label
+                    for="toggle"
+                    class="change-schedule-toggler toggler toggler-block"
+                  >
+                    <span class="toggler__text toggler__text-left"
+                      >Поточний</span
+                    >
+                    <input
+                      type="checkbox"
+                      id="toggle"
+                      class="toggle choose-curr-week__toggle"
+                    />
+                    <div class="toggler__button"></div>
+                    <span class="toggler__text toggler__text-right">Весь</span>
+                  </label>
+                </div>
+              </div>
+              <div class="sidebar-nav__item dropdown__block-extraclasses">
+                <div class="title-block">
+                  <img src="img/choose-teacher-icon.png" alt="" />
+                  <h3>Оберіть заняття</h3>
+                </div>
+                <div class="sidebar-nav__item-row">
+                  <div class="dropdown dropdown-extraclasses">
+                    <button class="dropdown__button">
+                      <p
+                        class="dropdown__button-text dropdown-extraclasses__button-text"
+                      ></p>
+                      <img
+                        class="dropdown__button-img"
+                        src="img/arrow.svg"
+                        alt=""
+                      />
+                    </button>
+                    <ul class="dropdown__list dropdown-list__extraclasses"></ul>
+                  </div>
+                  <div class="sidebar-save-option-button">
+                    <img src="img/button-save.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-nav__item dropdown__block-week">
+                <div class="title-block">
+                  <img src="img/choose-week-icon.svg" alt="" />
+                  <h3>Оберіть тиждень</h3>
+                </div>
+                <div class="dropdown dropdown-week">
+                  <button class="dropdown__button">
+                    <p class="dropdown__button-text"></p>
+                    <img
+                      class="dropdown__button-img"
+                      src="img/arrow.svg"
+                      alt=""
+                    />
+                  </button>
+                  <ul class="dropdown__list dropdown-list__week"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-sidebar-information">
+              <div class="hero-sidebar__schedule bell-schedule">
+                <div class="bell-schedule__header">
+                  <img
+                    class="bell-schedule__header-img"
+                    src="img/bell-icon.svg"
+                    alt="bell"
+                  />
+                  <h2 class="bell-schedule__header-title">Розклад дзвінків</h2>
+                </div>
+                <div class="bell-schedule__content bell-schedule-content"></div>
+              </div>
+              <div class="hero-sidebar__events upcoming-events">
+                <div class="upcoming-events__header">
+                  <h2 class="upcoming-events__header-title">Найближчі події</h2>
+                </div>
+                <div
+                  class="upcoming-events__content upcoming-events-content"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+      <main id="teachers-page" class="page teachers-page_main page-hidden">
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__content-wrapper">
+          <div class="hero-content__schedule-block schedule-block">
+            <div class="hero-content__date-of-update date-of-update">
+              <span class="date-of-update__text">Останнє оновлення:</span>
+              <span class="date-of-update__time"></span>
+            </div>
+            <div class="schedule-block__header schedule-block-header">
+              <div class="schedule-block-header__curr">
+                <div class="schedule-block-header__week"></div>
+                <div class="schedule-block-header__day"></div>
+              </div>
+            </div>
+
+            <div
+              id="schedule-block-body"
+              class="schedule-block__body schedule-block-body"
+            ></div>
+            <!-- append content from js -->
+          </div>
+          <div class="hero-content__sidebar hero-sidebar">
+            <div class="hero-sidebar__navigation sidebar-nav">
+              <button class="change-theme"></button>
+              <div class="sidebar-nav__item">
+                <div class="title-block">
+                  <img src="img/schedule-img.svg" alt="" />
+                  <h3>Розклад</h3>
+                </div>
+                <div class="toggler-button">
+                  <label
+                    for="toggle"
+                    class="change-schedule-toggler toggler toggler-block"
+                  >
+                    <span class="toggler__text toggler__text-left"
+                      >Поточний</span
+                    >
+                    <input
+                      type="checkbox"
+                      id="toggle"
+                      class="toggle choose-curr-week__toggle"
+                    />
+                    <div class="toggler__button"></div>
+                    <span class="toggler__text toggler__text-right">Весь</span>
+                  </label>
+                </div>
+              </div>
+              <div class="sidebar-nav__item">
+                <div class="title-block">
+                  <img src="img/choose-teacher-icon.png" alt="" />
+                  <h3>Вчитель</h3>
+                </div>
+                <div class="sidebar-nav__item-row">
+                  <div class="dropdown dropdown-teacher">
+                    <button class="dropdown__button">
+                      <p
+                        class="dropdown__button-text dropdown-teacher__button-text"
+                      ></p>
+                      <img
+                        class="dropdown__button-img"
+                        src="img/arrow.svg"
+                        alt=""
+                      />
+                    </button>
+                    <ul class="dropdown__list dropdown-list__teachers"></ul>
+                  </div>
+                  <div class="sidebar-save-option-button">
+                    <img src="img/button-save.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-nav__item dropdown__block-group">
+                <div class="title-block">
+                  <img src="img/choose-group-icon.svg" alt="" />
+                  <h3>Оберіть групу</h3>
+                </div>
+                <div class="dropdown dropdown-group">
+                  <button class="dropdown__button">
+                    <p
+                      class="dropdown__button-text dropdown-group__button-text"
+                    ></p>
+                    <img
+                      class="dropdown__button-img"
+                      src="img/arrow.svg"
+                      alt=""
+                    />
+                  </button>
+                  <ul class="dropdown__list dropdown-list__groups"></ul>
+                </div>
+              </div>
+              <div class="sidebar-nav__item dropdown__block-week">
+                <div class="title-block">
+                  <img src="img/choose-week-icon.svg" alt="" />
+                  <h3>Оберіть тиждень</h3>
+                </div>
+                <div class="dropdown dropdown-week">
+                  <button class="dropdown__button">
+                    <p class="dropdown__button-text"></p>
+                    <img
+                      class="dropdown__button-img"
+                      src="img/arrow.svg"
+                      alt=""
+                    />
+                  </button>
+                  <ul class="dropdown__list dropdown-list__week"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-sidebar-information">
+              <div class="hero-sidebar__schedule bell-schedule">
+                <div class="bell-schedule__header">
+                  <img
+                    class="bell-schedule__header-img"
+                    src="img/bell-icon.svg"
+                    alt="bell"
+                  />
+                  <h2 class="bell-schedule__header-title">Розклад дзвінків</h2>
+                </div>
+                <div class="bell-schedule__content bell-schedule-content"></div>
+              </div>
+              <div class="hero-sidebar__events upcoming-events">
+                <div class="upcoming-events__header">
+                  <h2 class="upcoming-events__header-title">Найближчі події</h2>
+                </div>
+                <div
+                  class="upcoming-events__content upcoming-events-content"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+      <main id="admin-page" class="page admin-page_main">
+  <div class="admin__container">
+    <div class="admin__content">
+      <div class="admin__content-wrapper">
+        <div class="admin-nav-block">
+          <div class="admin-nav-block__item" type="analitic">Аналітика</div>
+          <div class="admin-nav-block__item active" type="anonces">Анонси</div>
+        </div>
+        <div class="admin-main-body"></div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- 
+<script>
+  var quill = new Quill("#editor-container", {
+    theme: "snow", // Выбор темы редактора
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, 3, 4, 5, false] }],
+        ["bold", "italic", "underline", "strike"], // Опции форматирования текста
+        ["link"], // Опции добавления ссылок, изображений и видео
+        [{ color: [] }, { background: [] }], // Опции выбора цвета текста и фона
+        [{ align: [] }],
+        ["clean"], // Очистка форматирования
+      ],
+    },
+  });
+
+  function submitFormattedText() {
+    var formattedText = quill.root.innerHTML; // Получение отформатированного текста
+    // Отправка данных на сервер (ваш код отправки данных)
+    console.log("Отправка на сервер:", formattedText);
+  }
+</script>  -->
+ <main id="events-page" class="page events-page">
+  <div class="events__container">
+    <div class="events__content">
+      <div class="events__content-wrapper">
+        <div class="events-nav-block"></div>
+        <!-- <div class="events-upcoming">
+          <h2 class="events-upcoming-body__title">Найближчі</h2>
+          <div class="events-upcoming-body"></div>
+        </div> -->
+        <div class="events-main">
+          <h2 class="events-main-body__title">Всі події</h2>
+          <div class="events-main-body"></div>
+          <!-- <div class="anonce-item events-main-body__item">
+            <div class="anonce-item__content item-content">
+              <div class="item-content__img">
+                <img src="${anoncementData.image}" alt="" />
+              </div>
+              <div class="item-content__information item-information">
+                <div class="date-row-block">
+                  <p
+                    class="item-information__date"
+                    date="${anoncementData.finnalyDate}"
+                  >
+                    ${formattedDate}
+                  </p>
+                  <p class="item-information__time">
+                    ${anoncementData.finnalyTime}
+                  </p>
+                </div>
+                <h2 class="item-information__title">${anoncementData.title}</h2>
+                <div class="item-information__text">${anoncementData.text}</div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
     </div>
     <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__content"></div>
+  <div class="footer__container">
+    <div class="footer__content">
+      <div class="footer__main">
+        <a
+          target="_blank"
+          href="https://liceum.ztu.edu.ua/"
+          class="footer__logo-link"
+          ><img src="img/logo.png" alt=""
+        /></a>
+        <div class="footer__contacts contacts-footer">
+          <h3 class="contacts-footer__title">Контакти</h3>
+          <ul class="contacts-footer__row">
+            <a href="mailto:liceum@pinotino" class="contacts-footer__row-item">
+              <img
+                class="contacts-footer__row-item-img"
+                src="img/mail.png"
+                alt=""
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/ztueduua/"
+              class="contacts-footer__row-item"
+            >
+              <img
+                class="contacts-footer__row-item-img"
+                src="img/facebook.png"
+                alt=""
+            /></a>
+            <a
+              href="https://www.instagram.com/ztueduua/"
+              class="contacts-footer__row-item"
+            >
+              <img
+                class="contacts-footer__row-item-img"
+                src="img/instagram.png"
+                alt=""
+            /></a>
+          </ul>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
+  <!-- <div class="footer__bottom">
+    <div class="footer__container">
+      <div class="footer__bottom-content">
+        <p class="made-by">
+          <span>made by: </span
+          ><a href="mailto:gerasimcukvlad37@gmail.com">@2Voby</a>
+        </p>
+      </div>
+    </div>
+  </div> -->
+</footer>
 
-    <script src="js/index.js"></script>
+
+    <div class="page-loading">
+      <div class="page-loading__content">
+        <img
+          src="img/logo-icon.png"
+          alt=""
+          class="page-loading__content-img"
+        />
+      </div>
+    </div>
+    <div
+      class="popup-wrapper information-popup-wrapper information-popup--hidden"
+    >
+      <div class="popup information-popup">
+        <div class="information-popup__body information-popup-body">
+          <div class="information-popup__close">
+            <img src="img/close.svg" alt="" />
+          </div>
+          <div class="information-popup-body__main">
+            <!-- <h3 class="information-popup__text"></h3>
+            <div class="information-popup__content information-content"> -->
+            <!-- <div
+                class="holidays-content__item holidays-content__item-event-tab item-event-tab"
+              >
+                <div class="item-event-tab__header item-header">
+                  <div class="item-header__content">
+                    <p class="item-header__content-date">06.04.2023</p>
+                    <p class="item-header__content-event">
+                      Лекція в університеті
+                    </p>
+                  </div>
+                  <div class="item-header__button">
+                    <img src="img/events-tab-arrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="item-event-tab__content item-content">
+                  <p class="item-content__text">
+                    для всіх груп (крім 10-В) в аудиторії 999
+                  </p>
+                </div>
+              </div> -->
+            <!-- </div> -->
+            <!-- <div class="holidays-popup__chronology holidays-chronology">
+              <div class="holidays-chronology__line">
+                <div class="holidays-chronology-proggress"></div>
+                <div class="holidays-chronology__item">
+                  <div class="holidays-chronology__item-info">
+                    23.10.2022-09.01.2023
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-button">
+      <a
+        href="https://forms.gle/uze1Strf8LrZycbU8"
+        target="_blank"
+        class="message-button__img"
+      >
+        <img src="img/message-button.svg" alt="" />
+      </a>
+    </div>
+    <!-- <div class="message-form-wrapper d-none">
+      <div class="message-form-block">
+        <div class="message-form-block__inner message-inner">
+          <div class="message-inner__close-button">
+            <img src="img/close.svg" alt="close-form" />
+          </div>
+          <h3 class="message-inner__title">
+            Тут ви можете залишити свої побжання або оповістити про знайдену
+            помилку
+          </h3>
+          <form action="" class="message-form">
+            <div class="message-form__content">
+              <div
+                class="message-form__item message-form__toggler toggler-button"
+              >
+                <label for="toggle" class="toggler toggler-block">
+                  <span class="toggler__text toggler__text-left">Коментар</span>
+                  <input
+                    type="checkbox"
+                    id="toggle"
+                    class="toggle choose-message-type"
+                  />
+                  <div class="toggler__button"></div>
+                  <span class="toggler__text toggler__text-right">Баг</span>
+                </label>
+              </div>
+              <div class="message-form__item message-form__item-name">
+                <label for="messageFormName" class="message-form__label"
+                  >Ім'я*:</label
+                >
+                <input
+                  id="messageFormName"
+                  type="text"
+                  name="name"
+                  class="message-form__input _req"
+                />
+              </div>
+              <div class="message-form__item message-form__item-email">
+                <label for="messageFormEmail" class="message-form__label"
+                  >Пошта*:</label
+                >
+                <input
+                  id="messageFormEmail"
+                  type="email"
+                  name="emial"
+                  class="message-form__input _req _email"
+                />
+              </div>
+              <div class="message-form__item message-form__item-message">
+                <label for="messageFormMessage" class="message-form__label"
+                  >Повідомлення:</label
+                >
+                <textarea
+                  type="text"
+                  name="message"
+                  id="messageFormMessage"
+                  cols=""
+                  rows=""
+                  class="message-form__input"
+                ></textarea>
+              </div>
+            </div>
+            <div class="message-form__submit-button-wrapper">
+              <button type="submit" class="button message-form__submit-button">
+                Відправити форму
+              </button>
+
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="js/app.min.js?_v=20231123102737"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js?_v=20231123102737"></script>
   </body>
 </html>
