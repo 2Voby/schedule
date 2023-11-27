@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20231126202505" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20231127155530" />
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -28,7 +28,7 @@
     href="img/favicon/safari-pinned-tab.svg"
     color="#5bbad5"
   />
-  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css?_v=20231126202505" rel="stylesheet" />
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css?_v=20231127155530" rel="stylesheet" />
   <meta name="msapplication-TileColor" content="#2d89ef" />
   <meta name="theme-color" content="#ffffff" />
   <title>Розклад уроків</title>
@@ -278,20 +278,8 @@
                   <h2 class="upcoming-events__header-title">Найближчі події</h2>
                 </div>
                 <div class="upcoming-events__content upcoming-events-content">
-                  <!-- <div
-                    class="upcoming-events-content__item upcoming-events-item"
-                  >
-                    <div class="upcoming-events-item__content">
-                      <div class="upcoming-events-item__date-and-time">
-                        06.04.2023 13.30
-                      </div>
-                      <div class="upcoming-events-item__name">
-                        Конференція в університеті
-                      </div>
-                    </div>
-
-                    <div class="upcoming-events-item__button">інформація</div>
-                  </div> -->
+                  <div class="upcoming-events-body"></div>
+                  <div class="upcoming-events-item__button">Всі події</div>
                 </div>
               </div>
             </div>
@@ -600,15 +588,22 @@
     <div class="events__content">
       <div class="events__content-wrapper">
         <div class="events-nav-block"></div>
+        <div class="events-pinned events-block">
+          <h2 class="events-pinned-body__title events-block__header">
+            Закріплені події
+          </h2>
+          <div class="events-pinned-body events-block__body"></div>
+        </div>
+
         <div class="events-upcoming events-block">
           <h2 class="events-upcoming-body__title events-block__header">
-            Найближчі
+            Найближчі події
           </h2>
           <div class="events-upcoming-body events-block__body"></div>
         </div>
         <div class="events-main events-block">
           <div class="events-main__header events-block__header">
-            <h2 class="events-main-body__title">Всі події</h2>
+            <h2 class="events-main-body__title">Події та анонси</h2>
             <select class="events-main-body__filter" name="" id="">
               <option value="2">Актуальні</option>
               <option value="1">Всі</option>
@@ -841,7 +836,7 @@
       </div>
     </div> -->
 
-    <script src="js/app.min.js?_v=20231126202505"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js?_v=20231126202505"></script>
+    <script src="js/app.min.js?_v=20231127155530"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js?_v=20231127155530"></script>
   </body>
 </html>
