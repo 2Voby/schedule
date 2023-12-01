@@ -300,6 +300,22 @@ html {
   display: none !important;
 }
 
+.MAIN_PAGE_WRAPPER {
+  position: relative;
+}
+
+.MAIN_PAGE_WRAPPER.blured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+}
+
 #userName {
   background-color: #11f944;
 }
@@ -2294,6 +2310,13 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   position: relative;
 }
 
+.login__content .login-body .form-login .form-content__error p {
+  font-size: 14px;
+  margin-bottom: 0.625rem;
+  text-align: center;
+  color: red;
+}
+
 .login__content .login-body .form-login .form-content__item {
   border-radius: 8px;
   background: #575757;
@@ -2361,6 +2384,7 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   left: 0;
   width: 100%;
   position: absolute;
+  z-index: 5;
 }
 
 .header__content {
@@ -3137,6 +3161,100 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   background-color: rgb(0, 0, 0);
 }
 
+.profile-page {
+  padding-top: 110px;
+}
+
+.profile-page .profile {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding: 40px 0 60px 0;
+  border-bottom: 1px solid #333;
+}
+
+@supports ((-moz-column-gap: clamp( 1.25rem , 0.3977272727rem  +  2.2727272727vw , 3.125rem )) or (column-gap: clamp( 1.25rem , 0.3977272727rem  +  2.2727272727vw , 3.125rem ))) {
+  .profile-page .profile {
+    -moz-column-gap: clamp( 1.25rem , 0.3977272727rem  +  2.2727272727vw , 3.125rem );
+         column-gap: clamp( 1.25rem , 0.3977272727rem  +  2.2727272727vw , 3.125rem );
+  }
+}
+
+@supports not ((-moz-column-gap: clamp( 1.25rem , 0.3977272727rem  +  2.2727272727vw , 3.125rem )) or (column-gap: clamp( 1.25rem , 0.3977272727rem  +  2.2727272727vw , 3.125rem ))) {
+  .profile-page .profile {
+    -moz-column-gap: calc(1.25rem + 1.875 * (100vw - 37.5rem) / 82.5);
+         column-gap: calc(1.25rem + 1.875 * (100vw - 37.5rem) / 82.5);
+  }
+}
+
+.profile-page .profile__img {
+  position: relative;
+  width: 100%;
+  flex-basis: 250px;
+  height: 250px;
+  border-radius: 50%;
+  height: 250px;
+}
+
+.profile-page .profile__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile-page .profile .information-block {
+  padding: 20px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-page .profile .information-block__name {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 0.625rem;
+}
+
+.profile-page .profile .information-block__text {
+  font-size: 16px;
+  margin-bottom: 0.3125rem;
+}
+
+.profile-page .profile .information-block__text span {
+  font-size: 16px;
+}
+
+.profile-page .profile .information-block__group-code {
+  margin-bottom: 1.25rem;
+}
+
+.profile-page .profile .information-block__exit-button {
+  border-radius: 8px;
+  background: #f67b6a;
+  padding: 5px 15px;
+  width: 100%;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  color: #333;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.profile-page .profile .information-block__exit-button:hover {
+  box-shadow: 0px 0px 40px 0px rgba(229, 128, 128, 0.6);
+}
+
 .popup-wrapper {
   height: 100%;
   overflow-y: auto;
@@ -3826,6 +3944,22 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   }
 }
 
+@media (max-width: 600px) {
+  .profile-page .profile {
+    flex-direction: column;
+    align-items: center;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .profile-page .profile__img {
+    width: 200px;
+    flex-basis: 200px;
+    height: 200px;
+  }
+}
+
 @media (max-width: 426px) {
   .popup-wrapper .upcoming-event-popup .upcoming-event-popup-main .event {
     gap: 0px;
@@ -3929,6 +4063,13 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
 
   .hero-sidebar .hero-sidebar-information .upcoming-events {
     max-width: 18.75rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .profile-page .profile {
+    -moz-column-gap: inherit;
+         column-gap: inherit;
   }
 }
 
