@@ -741,6 +741,7 @@ html {
   flex: 0 0 25px;
   height: 25px;
   position: relative;
+  cursor: pointer;
 }
 
 .hero-sidebar .sidebar-nav__item-row .sidebar-save-option-button.choosed::before {
@@ -895,6 +896,73 @@ html {
 }
 
 .hero-sidebar .hero-sidebar-information .upcoming-events .upcoming-events-content .upcoming-events-item__button {
+  display: inline-flex;
+  align-content: center;
+  background-color: #c8ffa6;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 15px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border: 0.5px solid #010101;
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper {
+  width: 100%;
+  max-width: 18.75rem;
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events {
+  background-color: #fcfdfd;
+  align-self: center;
+  width: 100%;
+  max-width: 18.75rem;
+  border-radius: 0.625rem;
+  border: 0.4px solid #000000;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events__header {
+  border-bottom: 0.4px solid #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 5px;
+  background-color: #eff0f0;
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events__header-title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 115%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events .pinned-events-content {
+  padding: 10px 10px;
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events .pinned-events-content .pinned-events-item {
+  font-size: 16px;
+  line-height: 112.5%;
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events .pinned-events-content .pinned-events-item__content {
+  margin: 0 auto;
+  background-color: #c8ffa6;
+  padding: 5px 5px;
+  border-radius: 10px;
+  margin-bottom: 0.625rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events .pinned-events-content .pinned-events-item__button {
   display: inline-flex;
   align-content: center;
   background-color: #c8ffa6;
@@ -1768,6 +1836,39 @@ html.dark .hero-sidebar .upcoming-events .upcoming-events-content .upcoming-even
 }
 
 html.dark .hero-sidebar .upcoming-events .upcoming-events-content .upcoming-events-item__button {
+  color: #000;
+  background: #809ce5;
+  border: 0.5px solid #000000;
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper {
+  width: 100%;
+  max-width: 18.75rem;
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper .pinned-events {
+  background-color: #2d2f34;
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper .pinned-events__header {
+  background-color: #27292d;
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper .pinned-events__header-title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: rgb(255, 255, 255);
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper .pinned-events .pinned-events-content {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper .pinned-events .pinned-events-content .pinned-events-item__content {
+  background-color: #809ce5;
+  color: #000;
+}
+
+html.dark .hero-sidebar .pinned-events-wrapper .pinned-events .pinned-events-content .pinned-events-item__button {
   color: #000;
   background: #809ce5;
   border: 0.5px solid #000000;
@@ -3168,6 +3269,67 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   background-color: rgb(0, 0, 0);
 }
 
+.admin-page_main .admin__content .admin-settings .bells {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-page_main .admin__content .admin-settings .bells__header {
+  text-align: center;
+  margin-bottom: 0.4375rem;
+  padding: 10px 10px;
+  background-color: #c8c8c8;
+}
+
+.admin-page_main .admin__content .admin-settings .bells__header-table {
+  display: grid;
+  grid-template-columns: 70px 70px;
+  gap: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.admin-page_main .admin__content .admin-settings .bells .bells-body {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.admin-page_main .admin__content .admin-settings .bells .bells-body .bells-item {
+  display: grid;
+  grid-template-columns: 70px 70px auto;
+  gap: 30px;
+  width: 100%;
+}
+
+.admin-page_main .admin__content .admin-settings .bells .bells-body .bells-item__input {
+  position: relative;
+  width: 100%;
+}
+
+.admin-page_main .admin__content .admin-settings .bells .bells-body .bells-item__input input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-page_main .admin__content .admin-settings .bells .bells-body .bells-item__button {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  background-color: #ff6161;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .profile-page {
   padding-top: 110px;
 }
@@ -3453,6 +3615,24 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
 
 .events-page .events__content-wrapper .events-main__header .events-main-body__filter option:checked {
   background-color: #7ba1ff;
+}
+
+.events-page .events__content-wrapper .events-main .events-main-body__error-text {
+  font-size: 32px;
+  text-align: center;
+  padding: 80px 0;
+}
+
+@supports (font-size: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
+  .events-page .events__content-wrapper .events-main .events-main-body__error-text {
+    font-size: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.4rem  +  0.5vw , 2rem )) {
+  .events-page .events__content-wrapper .events-main .events-main-body__error-text {
+    font-size: calc(1.5rem + 0.5 * (100vw - 20rem) / 100);
+  }
 }
 
 .events-page .events__content-wrapper .anonce-item {
@@ -4073,6 +4253,10 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   }
 
   .hero-sidebar .hero-sidebar-information .upcoming-events {
+    max-width: 18.75rem;
+  }
+
+  .hero-sidebar .hero-sidebar-information .pinned-events-wrapper .pinned-events {
     max-width: 18.75rem;
   }
 }
