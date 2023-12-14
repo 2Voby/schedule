@@ -2162,6 +2162,39 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
   background-color: rgb(0, 0, 0);
 }
 
+html.dark .admin-page_main .admin__content .admin-settings .bells {
+  background-color: #383b40;
+}
+
+html.dark .admin-page_main .admin__content .admin-settings .bells .bells-header p {
+  color: #000;
+}
+
+html.dark .admin-page_main .admin__content .admin-settings .bells .bells-body .bells-body-content {
+  margin-bottom: 1.25rem;
+}
+
+html.dark .admin-page_main .admin__content .admin-settings .bells .bells-body .bells-body-content .bells-item__close {
+  background-color: #ff6161;
+}
+
+html.dark .admin-page_main .admin__content .admin-settings .bells .bells-body__add-button {
+  background-color: #809ce5;
+  color: #fff;
+}
+
+html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-header {
+  background-color: #383b40;
+}
+
+html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-header__item {
+  color: #fff;
+}
+
+html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-header__item.active {
+  color: #000;
+}
+
 .mobile-menu {
   transition: transform 0.3s ease;
   position: fixed;
@@ -3271,7 +3304,7 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
 }
 
 .admin-page_main .admin__content .admin-settings .bells {
-  background-color: #383b40;
+  background-color: #dddddd;
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
@@ -3294,6 +3327,7 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
 .admin-page_main .admin__content .admin-settings .bells .bells-header p {
   font-size: 20px;
   font-weight: 500;
+  color: #fff;
 }
 
 .admin-page_main .admin__content .admin-settings .bells .bells-header-buttons {
@@ -3406,7 +3440,7 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
 }
 
 .admin-page_main .admin__content .admin-schedule .admin-schedule-header {
-  background-color: #383b40;
+  background-color: #d6d6d6;
   padding: 10px 20px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -3425,7 +3459,7 @@ html.dark .admin-page_main .admin__content .admin-anonces__anonces-body .anonce-
 .admin-page_main .admin__content .admin-schedule .admin-schedule-header__item {
   background-color: inherit;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   padding: 5px 7px;
   border-radius: 5px;
   cursor: pointer;
