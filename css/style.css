@@ -2855,6 +2855,7 @@ html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-heade
   min-height: 400px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.875rem;
 }
 
 .admin-page_main .admin__content .admin-analitic .admin-preloader {
@@ -4029,6 +4030,7 @@ html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-heade
 
 .footer__logo-link {
   max-width: 200px;
+  margin: 0 auto;
 }
 
 .footer .contacts-footer {
