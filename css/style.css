@@ -3009,6 +3009,32 @@ html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-heade
   transform: translate(-50%, -50%);
 }
 
+.admin-page_main .admin__content .admin-anonces__new-anonce-parent-block.new-anonce-item .new-anonce-item__controlls .anonce-item__send-tg-button {
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  position: relative;
+  border: 1px solid #000;
+}
+
+.admin-page_main .admin__content .admin-anonces__new-anonce-parent-block.new-anonce-item .new-anonce-item__controlls .anonce-item__send-tg-button img {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.admin-page_main .admin__content .admin-anonces__new-anonce-parent-block.new-anonce-item .new-anonce-item__controlls .anonce-item__send-tg-button[state=true] {
+  background: #57ff48;
+}
+
+.admin-page_main .admin__content .admin-anonces__new-anonce-parent-block.new-anonce-item .new-anonce-item__controlls .anonce-item__send-tg-button[state=false] {
+  background-color: #ffffff;
+}
+
 .admin-page_main .admin__content .admin-anonces__new-anonce-parent-block.new-anonce-item .new-anonce-item__controlls .anonce-item__save-button {
   background-color: #57ff48;
 }
@@ -3536,6 +3562,55 @@ html.dark .admin-page_main .admin__content .admin-schedule .admin-schedule-heade
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.shureSendPopup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+}
+
+.shureSendPopup__content {
+  padding: 10px 15px;
+  background-color: #383b40;
+  max-width: 500px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.shureSendPopup__title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.shureSendPopup__buttons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.shureSendPopup__button {
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.shureSendPopup__button-yes {
+  background-color: #4d91ff;
+}
+
+.shureSendPopup__button-no {
+  background-color: #ff4d4d;
 }
 
 .profile-page {
