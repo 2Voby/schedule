@@ -63,7 +63,7 @@
 
     <script>
       let defferedPrompt = null;
-      window.addEventListener("beforeinstallprompt", function (e) {
+      window.addEventListener("beforeinstallprompt", (e) => {
         e.preventDefault();
         console.log(e);
         defferedPrompt = e;
