@@ -61,6 +61,28 @@
         });
       }
     </script>
+
+    <script>
+      let defferedPrompt = null;
+      window.addEventListener("beforeinstallprompt", function (e) {
+        e.preventDefault();
+        defferedPrompt = e;
+      });
+      async function install() {
+        if (defferedPrompt) {
+          defferedPrompt.prompt();
+          console.log(defferedPrompt);
+          defferedPrompt.userChoice.then(function (choiseResult) {
+            if (choiseResult.outcome === "accepted") {
+              console.log("Your PWA has been installed");
+            } else {
+              console.log("User chose to not install your PWA ");
+            }
+            defferedPrompt = null;
+          });
+        }
+      }
+    </script>
   </head>
 
   <body>
