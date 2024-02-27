@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="/manifest.json" />
+    <script src="/pwabuilder-sw.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.min.css?_v=20240227122857" />
-    <link rel="manifest" href="/manifest.json" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -34,7 +36,6 @@
       rel="stylesheet"
     />
 
-    <script src="/pwabuilder-sw.js"></script>
     <meta name="msapplication-TileColor" content="#2d89ef" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png" />
@@ -115,6 +116,7 @@
             <a href="#events" class="menu-body__item anonces-page-open"
               >Анонси та події</a
             >
+            <button onclick="install()">Завантажити веб-застосунок</button>
 
             <!-- <div class="menu-body__item">Консультації</div> -->
             <!-- <div class="menu-body__item">Журнал відвідувань</div> -->
