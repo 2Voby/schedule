@@ -65,10 +65,11 @@
       let defferedPrompt = null;
       window.addEventListener("beforeinstallprompt", function (e) {
         e.preventDefault();
+        console.log(e);
         defferedPrompt = e;
       });
       async function install() {
-        console.log("Button clicked");
+        console.log(defferedPrompt);
         if (defferedPrompt) {
           defferedPrompt.prompt();
           console.log(defferedPrompt);
