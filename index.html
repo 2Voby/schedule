@@ -68,6 +68,7 @@
         defferedPrompt = e;
       });
       async function install() {
+        console.log("Button clicked");
         if (defferedPrompt) {
           defferedPrompt.prompt();
           console.log(defferedPrompt);
