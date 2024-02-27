@@ -3,6 +3,7 @@
   "short_name": "mySchedule",
   "theme_color": "#fff",
   "background_color": "#fff",
+  "description":"Розкалад занять Наукового ліцею"
   "display": "standalone",
   "orientation": "",
   "scope": "/",
