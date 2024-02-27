@@ -1,18 +1,37 @@
 {
-  "name": "Розклад - Науковий ліцей",
-  "short_name": "mySchedule",
-  "theme_color": "#fff",
-  "background_color": "#fff",
-  "description":"Розкалад занять Наукового ліцею"
+  "background_color": "#2d89ef",
+  "dir": "ltr",
   "display": "standalone",
-  "orientation": "",
+  "name": "lyceum-schedule.ztu.edu",
+  "orientation": "any",
   "scope": "/",
-  "start_url": "https://lyceum-schedule.ztu.edu.ua",
+  "short_name": "lyceum-schedule.ztu.edu",
+  "start_url": "https://lyceum-schedule.ztu.edu.ua/schedule",
+  "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/img/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/img/favicon/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/img/favicon/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/img/favicon/faviocon/apple-touch-icon.png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "/img/icons/icon-512x512.png"
+    },
+    {
+      "src": "img/favicon/safari-pinned-tab.svg"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
     }
   ]
 }
